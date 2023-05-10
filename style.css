@@ -1,0 +1,749 @@
+body {
+    /* background-image: url(images/background.png); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Header, which is the same for all the pages. */
+#header {
+    background-color: #FA0404;
+    box-shadow: 4px 4px 4px 4px white;
+}
+
+/* Attributes of links in the header. */
+#header a:link {
+    color: white;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+#header .flex-item-header_select {
+    color: #FA0404;
+}
+
+#header .flex-item-header_select a {
+    color: #FA0404;
+}
+
+/* Used to keep the same color even after clicking the links in the header. */
+.flex-header a:visited {
+    color: white;
+}
+
+/* Applies the flex attribute to all flex classes. */
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 0;
+}
+
+/* flex used for the header. */
+.flex-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    flex-wrap: wrap;
+}
+
+/* Used for planAcces - Items aren't aligned at the center. */
+.flex-uncenter {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 0;
+}
+
+.flex-tags {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 0;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.flex-partenaire {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 0;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.flex-membres {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+/* Attributes to have all flex items being the same. */
+.flex-item {
+    font-size: 28px;
+    background: none;
+    border: none;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: "Times New Roman";
+    font-style: italic;
+}
+
+.flex-item-header_select {
+    background-color: white;
+    font-size: 28px;
+    color: black;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 2px;
+    border: none;
+}
+
+a .flex-item-header_select {
+    color: #FA0404;
+}
+
+.dropdown button {
+    color: white;
+}
+
+/* Position needed for the hover and dropbars. */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    border: none;
+    color: white;
+}
+  
+/* Dropbar content (Hidden by default, shows when hover) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FA0404;
+    min-width: 160px;
+    box-shadow: 0px 18px 6px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+/* Changes to the links inside the dropbars. */
+.dropdown-content a {
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+
+    font-size: 22px;
+}
+  
+/* Items in the dropbar menu will change color on hover. */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+/* Animation to show the dropbar menu on hover. */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.grid-container {
+    display: grid;
+    row-gap: 20px;
+    column-gap:20px;
+}
+
+.mouvmentblock{
+    width: 100px;
+    height: 20px;
+    background: red;
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function:cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+    grid-row-start: 2;
+}
+
+.mouvmentblock:hover {
+    width: 150px;
+}
+
+/* Used for titles in pages. */
+h1 {
+    text-align: left;
+    font-weight: normal;
+    font-size: 40px;
+    color: red;
+
+    background-color: #E9E3E3;
+    padding-bottom: 50px;
+
+    margin-left: 50px;
+    margin-right: 50px;
+
+    padding-top: 50px;
+    padding-left: 50px;
+
+    display:grid;
+    grid-template-columns: 1fr 75px;
+    grid-template-rows: repeat(2,auto);
+}
+
+/* Used for titles in sections of pages. */
+h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+
+    background-color: #D9D9D9;
+    padding-bottom: 5px;
+    border-radius: 10px;
+}
+
+/* Used for red sections of pages. */
+h3 {
+    font-size: 32px;
+    color: #FF0000;
+}
+
+/* Used for black sections of pages. */
+h4 {
+    font-size: 32px;
+}
+
+h5 {
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 30px;
+
+    text-align: center;
+}
+
+h6{
+    color: #000000;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 38px;
+}
+
+h6.contact{
+    height: auto;
+    width: 150;
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: center;
+}
+
+/* Used for members. */
+
+input[type=text], textarea, input[type=email] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-right: 0px;
+    margin-left: 0px;
+    resize: vertical;
+  }
+  
+input[type=submit] {
+    background-color: #E9E3E3;
+    color: #000000;
+    padding: 12px 20px;
+    border: none;
+    width: 100%;
+    box-sizing : border-box;
+    border-radius:5px;
+    /* redéfinition 400 + 2*20 */
+    max-width: 440px;
+    margin:0 auto;
+    
+  }
+  
+input[type=submit]:hover {
+    background-color: #CCC;
+  }
+
+  
+.container {
+    /* Ajouter box-sizing */
+    box-sizing : border-box;
+    border-radius:5px;
+    background-color:#E9E3E3;
+    padding:20px;
+    width: 100%;
+    /* redéfinition 400 + 2*20 */
+    max-width: 440px;
+    margin:0 auto;
+  }
+
+p {
+    font-size: 20px;
+    padding: 5px;
+}
+
+form p{
+    font-size: 5px;
+    padding: 5px;
+}
+
+/* Attributes of all links. */
+a {
+    color: black;
+    text-decoration: none;
+    vertical-align: middle;
+    font-style: italic;
+}
+
+/* Used for scrollable items. */
+.scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 50%;
+    background-color: #E7E7E7;
+    border: 1px black solid;
+    padding: 2%;
+    width: 500px;
+    height: 75vh;
+    margin: 0 auto;
+    font-size: large;
+}
+
+.descriptionProjet {
+    font-size: 18px;
+}
+
+.infosProjet {
+    font-size: 16px;
+}
+
+/* Useful for responsive centered pictures, especially for the access to the campus. */
+.responsive {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    /* width: 500px; */
+    height: auto;
+}
+
+/* Used for lists (organized and unorganized.). */
+li {
+    font-size: 18px;
+}
+
+/* Used to separate the webpage in two thanks to a small black vertical line. */
+.verticalLine {
+    border-right: 4px solid black;
+    height: 75vh;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#carre-congres {
+    display: inline;
+    vertical-align: middle;
+    height: 20px;
+    width: 20px;
+    float: left;
+    margin-right: 5px;
+    background-color: #196ca3;
+}
+
+#carre-revue {
+    display: inline;
+    vertical-align: middle;
+    height: 20px;
+    width: 20px;
+    float: left;
+    margin-right: 5px;
+    background-color: #c32b72;
+}
+
+/* hr {
+    border-top: 5px solid #095484;
+    width: 500px;
+} */
+
+.background {
+    position: absolute;
+    width: 100px;
+    height: 1000px;
+    top: -200px;
+
+    background: red;
+    transform: rotate(45deg);
+
+    z-index: -1;
+}
+
+.gray-bg {
+    background-color: #E9E3E3;
+    border-radius: 10px;
+}
+
+.tag {
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #6e717d;
+    border: 10px;
+    color: white;
+    margin: 2px;
+}
+
+.trapezoidL {
+    border-bottom: 100px solid;
+    border-left: 100px solid transparent;
+    height: 0;
+    width: 350px;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+}
+
+.trapezoidR {
+    border-bottom: 100px solid;
+    border-right: 100px solid transparent;
+    height: 0;
+    width: 350px;
+    margin-top: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    justify-self: right;
+}
+
+.spe1 {
+    color: #7004FA;
+}
+
+.spe2 {
+    color: #7a06f9;
+}
+
+.spe3 {
+    color: #8208f8;
+}
+
+.spe4 {
+    color: #8a0bf7;
+}
+
+.spe5 {
+    color: #920ff6;
+}
+
+.text-spe {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-membre {
+    display: grid;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    flex-basis: 20%;
+}
+
+.grid-membre:hover {
+    animation-name: membre-background;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes membre-background {
+    0% {background-color: white; color: black;}
+    100% {background-color: gray; color: white;}
+}
+
+.membre {
+    border-radius: 50%;
+    max-width: 200px;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+.description-membre {
+    text-align: center;
+}
+
+/* offre d'emploi */
+#content{
+    box-sizing: border-box;
+    border-radius: 25px;
+    background-color:#E9E3E3;
+    padding:20px;
+}
+
+
+#layout-OffreDEemploi {
+    display: grid;
+    grid-template-rows: repeat(4,auto);
+    grid-template-columns: repeat(3,auto);
+    grid-row-gap:20px;
+    grid-column-gap: 20px;
+}
+
+#type-emploi{
+    /* margin-left:auto;
+    margin-right:auto; */
+    background-color: #BBBBBB;
+    box-sizing : border-box;
+    height:50px;
+    border-radius:5px;
+    text-align: center;
+    padding-block: 5px;
+    grid-row:1;
+    padding:10px;
+    font-size: 20px;
+}
+
+#Emploi-box{
+    vertical-align:text-bottom;
+    background-color: #E9E3E3;
+    box-sizing : border-box;
+    height:150px;
+    border-radius:5px;
+    text-align: center;
+    padding:20px;
+    font-size: 20px;
+}
+
+#point{
+    background-color: #E9E3E3;
+    box-sizing : border-box;
+    height:25px;
+    border-radius:5px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#none{
+    background-color:#FFF;
+    opacity: 0%;
+}
+
+h4#thematique{
+    text-align: center;
+}
+
+#title-text{
+    grid-row-start:1;
+    grid-row-end:3;
+    grid-column-start:1;
+    grid-column-end:2;
+
+    padding:20px;
+    background-color:#E9E3E3;
+}
+
+#axe1{
+    grid-row-start:1;
+    grid-row-end:2;
+    grid-column-start:2;
+    grid-column-end:3;
+
+    padding:20px;
+    background-color:#E9E3E3;
+    border-radius: 20px;
+}
+
+#axe2{
+    grid-row-start:2;
+    grid-row-end:3;
+    grid-column-start:2;
+    grid-column-end:3;
+
+    padding:20px;
+    background-color:#E9E3E3;
+    border-radius: 20px;
+}
+
+h7{
+    text-align: left;
+    font-weight: normal;
+    font-size: 40px;
+    color: red;
+}
+
+/* plateforme technologique */
+.techno-flex{
+    display :grid;
+    grid-template-rows: repeat(1,auto);
+    grid-template-columns: repeat(2,auto);
+    grid-column-gap: 20px;
+}
+
+#card-one{
+    grid-row-start:1;
+    grid-row-end:2;
+    grid-column-start:1;
+    grid-column-end:2;
+
+    padding:20px;
+    background-color:#E9E3E3;
+    border-radius: 20px;
+}
+
+img#image{
+    image-rendering: optimizeQuality;
+    padding-left: 20px;
+    padding-right: auto;
+}
+
+#card-two{
+    grid-row-start:1;
+    grid-row-end:2;
+    grid-column-start:2;
+    grid-column-end:3;
+
+    padding:20px;
+    background-color:#E9E3E3;
+    border-radius: 20px;
+}
+
+/* acceuil */
+.flex-acceuil{
+    display :grid;
+    grid-template-rows: repeat(4,auto);
+    grid-template-columns: repeat(2,auto);
+    grid-column-gap: 20px;
+    grid-row-gap:20px;
+}
+
+#presentation-text{
+    max-width: 700px;
+    padding:10px;
+    background-color:#E9E3E3;
+    grid-row-start:1;
+    grid-row-end:3;
+    grid-column-start:1;
+    grid-column-end:2;
+}
+
+#view-buton{
+    background-color: #D9D9D9;
+    border-radius: 25px;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+}
+
+#img{
+    max-block-size: 316px 140px;
+    grid-row-start:3;
+    grid-row-end:5;
+    grid-column-start:1;
+    grid-column-end:2;
+    padding : 0px;
+}
+
+#titre-actu{
+    background-color:#E9E3E3 ;
+    text-align: center;
+    grid-row-start:1;
+    grid-row-end:2;
+    grid-column-start:2;
+    grid-column-end:3;
+}
+
+.cartes-actu{
+    background-color: #E9E3E3;
+    box-shadow: 10px 5px 5px grey;
+    transition-duration: 1s;
+    padding:10px;
+    border-radius: 25px;
+}
+
+.cartes-actu:hover {
+    animation-name: cartes-actu;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cartes-actu {
+    0% {background-color: #E9E3E3; color: black;}
+    100% {background-color: gray; color: white;}
+}
+
+
+#carte-one{
+    grid-row-start:2;
+    grid-row-end:3;
+    grid-column-start:2;
+    grid-column-end:3;
+}
+
+#carte-two{
+    grid-row-start:2;
+    grid-row-end:3;
+    grid-column-start:3;
+    grid-column-end:4;
+}
+
+#carte-three{
+    grid-row-start:2;
+    grid-row-end:3;
+    grid-column-start:4;
+    grid-column-end:5;
+}
+
+div.material-symbols-outlined {
+    color:#000000;
+    grid-column-start:2 ;
+    grid-column-end:3;
+    grid-row-start:1;
+    grid-row-end:3;
+    padding:10px;
+    /* border:5px solid black; */
+}
+
+
+/* footer */
+
+.grid-container-footer {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+
+.grid-item-footer {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+    background: none;
+    border: none;
+
+    font-size: 28px;
+}
+
+.degrade-horizontal {
+    background: linear-gradient(to right, red, white);
+    
+  }
+  
+div.degrade-horizontal {
+    height: auto;
+    width: auto;
+}
+
