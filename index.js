@@ -1,18 +1,18 @@
 function main(){
     console.log("prout");
-
+    toast();
 
 }
 
-function OnclickColorChange(id){
-    console.log("on a cliqué sur ",id);
-    let iidd = document.getElementById(id);
-    iidd.style.color='#fffffff';
+function toast(){
+    let x = document.getElementById('presentation-text');
+    console.log(x);
 }
 
-function BackIndex(){
-    console.log("retour à l'acceuil");
-    
+function miseEnAttente(){
+    //Traitement
+    setTimeout(fonctionAExecuter, 5000); //On attend 5 secondes avant d'exécuter la fonction
 }
+
 
 main();
