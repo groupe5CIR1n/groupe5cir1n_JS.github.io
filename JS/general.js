@@ -43,7 +43,13 @@ function RedirectClick(acces){
 }
 
 function MembreClick(){
-    console.log("preout");
+    alert("êtes vous sur de vouloir aller sur la page membre ?");
+    alert("Vraiment sûr ? ");
+    alert("VRAIMENT, vraiment sûr ?");
+    alert("pis c'étais dur a coder alors bif bof");
+    alert("bon ben si t'est sur ...");
+    alert("bon celui là il est juste là pour faire chier tkt"),
+    RedirectClick("membres.html");
 }
 
 main();
