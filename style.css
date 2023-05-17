@@ -12,7 +12,7 @@ body {
 }
 
 /* Attributes of links in the header. */
-#header a:link {
+#header a {
     color: white;
     text-decoration: none;
     vertical-align: middle;
@@ -30,6 +30,7 @@ body {
 .flex-header a:visited {
     color: white;
 }
+
 
 /* Applies the flex attribute to all flex classes. */
 .flex {
