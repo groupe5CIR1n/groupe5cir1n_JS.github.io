@@ -1,10 +1,10 @@
 //ici on met toutes le fonctions générales à incorporer (tout ce qui concerne la navbar, le hooter ou tout ce que l'ont peut réutiliser);
 function main(){
 
-    var changePOsitionBox = document.getElementsByTagName("title")[0].baseURI;
-    console.log(changePOsitionBox);
+    // var changePOsitionBox = document.getElementsByTagName("title")[0].baseURI;
+    // console.log(changePOsitionBox);
 
-
+    placeDate();
 
     console.log("prout");
     var acc = document.getElementsByTagName("a")[0];
@@ -50,6 +50,13 @@ function MembreClick(){
     alert("bon ben si t'est sur ...");
     alert("bon celui là il est juste là pour faire chier tkt"),
     RedirectClick("membres.html");
+}
+
+function placeDate(){
+    console.log("on place la date");
+    var pos = document.getElementById("Clock-Position");
+    
+
 }
 
 main();
