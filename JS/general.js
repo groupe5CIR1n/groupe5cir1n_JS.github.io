@@ -55,8 +55,8 @@ function MembreClick(){
 function placeDate(){
     console.log("on place la date");
     var pos = document.getElementById("Clock-Position");
-    
-
 }
-
+function copy() {
+    console.log("Le non respect de droit d'auteur peut vous exposer à des potentielles poursuites en justice, et des sanctions pouvant aller jusqu'à 500.000€ d'amende et trois ans d'emprisonnement. Votre adresse IP a été enregistrée et envoyée aux forces de l'ordre. Bon courage. (:");
+}
 main();
