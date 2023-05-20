@@ -442,6 +442,11 @@ li {
     color: #920ff6;
 }
 
+.spe6 {
+    color: #9a0ff5;
+    visibility: hidden;
+}
+
 .text-spe {
     color: white;
     font-size: 30px;
