@@ -6,42 +6,44 @@
     <link rel="icon" type="image/png" href="images/LOGO.png" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link href="style.css" rel="stylesheet"> 
+    <link href="style.css" rel="stylesheet">
+    <script src="JS/general.js" defer></script>
     <script src="membres.js" defer></script>
 </head>
-    <body>
+    <body oncopy="copy()">
         <div class="background"></div>
         <!-- Header -->
         <div id="header">
+
             <div class="flex-header">
 
-                <div class="flex-item"><a href="index.html"><span class="material-symbols-outlined">home</span> Accueil</a></div>
+                <div class="flex-item"><a><span class="material-symbols-outlined">home</span> Accueil</a></div>
                 
                 <div class="dropdown">
                     <button class="flex-item"><span class="material-symbols-outlined">search</span> Recherche</button>
                     <div class="dropdown-content">
-                        <a href="thematiqueDeRecherche.html">Thématiques de recherche</a>
-                        <a href="plateformeTechnologique.html">Plateformes technologiques</a>
+                        <a>Thématiques de recherche</a>
+                        <a>Plateformes technologiques</a>
                     </div>
                 </div>
 
-                <div class="flex-item-header_select"><a href="membres.html"><span class="material-symbols-outlined">group</span> Membres</a></div>
+                <div class="flex-item-header_select"><a><span class="material-symbols-outlined">group</span> Membres</a></div>
                 
-                <div class="flex-item"><a href="projets.html"><span class="material-symbols-outlined">flight_takeoff</span> Projets</a></div>
+                <div class="flex-item"><a><span class="material-symbols-outlined">flight_takeoff</span> Projets</a></div>
                 
-                <div class="flex-item"><a href="publications.html"><span class="material-symbols-outlined">receipt_long</span> Publications</a></div>
+                <div class="flex-item"><a><span class="material-symbols-outlined">receipt_long</span> Publications</a></div>
 
-                <div class="flex-item"><a href="partenaires.html"><span class="material-symbols-outlined">groups</span> Partenaires</a></div>
+                <div class="flex-item"><a><span class="material-symbols-outlined">groups</span> Partenaires</a></div>
 
                 <div class="dropdown">
                     <button class="flex-item"><span class="material-symbols-outlined">contact_support</span> Infos & Contacts </button>
                     <div class="dropdown-content">
-                        <a href="contact.html">Contactez-nous</a>
-                        <a href="planAcces.html">Plan d'accès</a>
-                        <a href="offresDEmploi.html">Offres d'emploi</a>
+                        <a>Contactez-nous</a>
+                        <a>Plan d'accès</a>
+                        <a>Offres d'emploi</a>
                     </div>
                 </div>
-                <a href="index.html"><img src="images/LabISEN.png" width="80px" height="auto"></a>
+                <a href="TestZone.html"><img src="images/LabISEN.png" width="80px" height="auto"></a>
             </div>
         </div>
 
@@ -49,6 +51,8 @@
                     <h1>Membres<div class="mouvmentblock"></div><div class="material-symbols-outlined">contact_support</div></h1>
 
                     <button onclick="editMode(this)">Edit mode</button>
+
+                    <div id="loaderZone"></div>
 
                     <div class="grid">
                         <div class="trapezoidL spe1"><div class="text-spe">Enseignants<br>chercheurs permanents</div></div>

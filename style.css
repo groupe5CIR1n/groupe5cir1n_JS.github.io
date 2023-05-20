@@ -12,7 +12,7 @@ body {
 }
 
 /* Attributes of links in the header. */
-#header a:link {
+#header a {
     color: white;
     text-decoration: none;
     vertical-align: middle;
@@ -30,6 +30,7 @@ body {
 .flex-header a:visited {
     color: white;
 }
+
 
 /* Applies the flex attribute to all flex classes. */
 .flex {
@@ -747,6 +748,70 @@ div.degrade-horizontal {
     width: auto;
 }
 
+.loader {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: block;
+    margin:15px auto;
+    position: relative;
+    color: black;
+    box-sizing: border-box;
+    animation: animloader 2s linear infinite;
+  }
+  
+  @keyframes animloader {
+    0% {
+      box-shadow: 14px 0 0 -2px,  38px 0 0 -2px,  -14px 0 0 -2px,  -38px 0 0 -2px;
+    }
+    25% {
+      box-shadow: 14px 0 0 -2px,  38px 0 0 -2px,  -14px 0 0 -2px,  -38px 0 0 2px;
+    }
+    50% {
+      box-shadow: 14px 0 0 -2px,  38px 0 0 -2px,  -14px 0 0 2px,  -38px 0 0 -2px;
+    }
+    75% {
+      box-shadow: 14px 0 0 2px,  38px 0 0 -2px,  -14px 0 0 -2px,  -38px 0 0 -2px;
+    }
+    100% {
+      box-shadow: 14px 0 0 -2px,  38px 0 0 2px,  -14px 0 0 -2px,  -38px 0 0 -2px;
+    }
+  }
+
+
+#overlay {
+    border: 1px solid black;
+    /* width: 480px;
+    height: 450px; */
+    position: absolute;
+    display: inline-block;
+    background-image: url('images/competences.jpg');
+    /* background-repeat: no-repeat; */
+  }
+
+  #topBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 32px;
+  }
+  
+  #topBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
+
+  .img-zoom {
+    position: fixed;
+}
 button {
     border: none;
     color: white;
