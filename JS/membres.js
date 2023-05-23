@@ -1,4 +1,4 @@
-let amountOfMembers = 0;
+let debug = 1;
 
 function editMode(button) {
     var buttonAdd = document.getElementById("addMember");
@@ -36,7 +36,7 @@ function editMode(button) {
 
 function addMember() {
     var flexMembres = document.getElementsByClassName("flex-membres");
-    var flexMembre = flexMembres[flexMembres.length -1];
+    var flexMembre = flexMembres[0];
 
     var gridMembre = document.createElement("div");
     gridMembre.className += "grid-membre";
@@ -44,16 +44,52 @@ function addMember() {
     var imgMembre = document.createElement("img");
     imgMembre.className += "membre";
     imgMembre.src = "images/membres/Salima-Bourbia.png";
+
+    var grid = document.createElement("div");
+    grid.classList += "grid";
+
+    var nameMembre = document.createElement("h5");
+    nameMembre.innerHTML = "Nouveau membre";
+
+    var descr = document.createElement("p");
+    descr.classList += "description-membre";
+    descr.innerHTML = "description du membre";
     
-    if (amountOfMembers == 0) {
-        var spe6 = document.getElementsByClassName("spe6")[0];
-        spe6.style.visibility = "visible";
-        amountOfMembers++;
-    }
+    var descr2 = document.createElement("p");
+    descr2.classList += "description-membre";
+    descr2.innerHTML = "ISEN Yncréa Ouest - Nantes";
+
+    var mail = document.createElement("a");
+    mail.href = "mailto:mailTemporaire@temp.temp";
+    mail.classList += "description-membre";
+    mail.innerHTML = mail.href.substring(7);
+
+    var tags = document.createElement("div");
+    tags.classList += "flex-tags";
+
+    var tag = document.createElement("div");
+    tag.classList += "tag";
+    tag.innerHTML = "temp Tag";
+
+    var button = document.createElement("button");
+    button.classList += "delete";
+    button.innerHTML = "X - Supprimer (monstre !)";
+    button.onclick = deleteMembre;
     
-    console.log(flexMembre);
     flexMembre.appendChild(gridMembre);
     gridMembre.appendChild(imgMembre);
+    gridMembre.appendChild(grid);
+    grid.appendChild(nameMembre);
+    grid.appendChild(descr);
+    grid.appendChild(descr2);
+    grid.appendChild(mail);
+    grid.appendChild(tags);
+    tags.appendChild(tag);
+    gridMembre.appendChild(button);
+}
+
+function deleteMembre() {
+    this.parentNode.remove();
 }
 
 function main() {
@@ -67,6 +103,13 @@ function main() {
 
     parentNode.insertBefore(buttonAdd, doc);
 
+    if (debug == 1) {
+        console.log("Debug mode actif...");
+        var buttonAdd = document.getElementById("addMember");
+        var button = document.getElementById("buttonEdit");
+        button.innerHTML = "Retourner en vue du bas peuple";
+        buttonAdd.style.visibility = "visible";
+    }
 }
 
 main();

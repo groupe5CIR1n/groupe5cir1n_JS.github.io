@@ -78,6 +78,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 
@@ -460,9 +461,11 @@ li {
 .grid-membre {
     display: grid;
     padding: 5px;
+    margin-bottom: 50px;
     border-radius: 5px;
     border: 2px solid black;
     flex-basis: 20%;
+    flex: 0 25%;
 }
 
 .grid-membre:hover {
@@ -836,4 +839,15 @@ button {
 button:hover {
     background-color: #4CAF50;
     color: white;
+}
+
+
+
+.delete {
+    background-color: red;
+    border-color: white;
+}
+
+.delete:hover {
+    background-color: red;
 }
