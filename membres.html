@@ -7,12 +7,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="style.css" rel="stylesheet">
-    <!-- <link href="CSS/membres.css" rel="stylesheet"> -->
+    <link href="CSS/membres.css" rel="stylesheet">
     <script src="JS/general.js" defer></script>
     <script src="JS/membres.js" defer></script>
 </head>
     <body oncopy="copy()">
         <div class="background"></div>
+        
         <!-- Header -->
         <div id="header">
 
@@ -48,6 +49,16 @@
             </div>
         </div>
 
+        <!-- Modal -->
+        <div id="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal(this.parentNode.parentNode)">&times;</span>
+                <br>
+                <!-- grid-membre will be append here! -->
+            </div>
+        </div>
+
         <!-- Content of the html. -->
                     <h1>Membres<div class="mouvmentblock"></div><div class="material-symbols-outlined">contact_support</div></h1>
 
@@ -58,7 +69,7 @@
                     <div class="grid">
                         <div class="trapezoidL spe1"><div class="text-spe">Enseignants<br>chercheurs permanents</div></div>
                         <div class="flex-membres">
-                            <div class="grid-membre">
+                            <div class="grid-membre" onclick="modal(this)">
                                 <img class="membre" src="images/membres/Ayoub-Karine.png">
                                 <div class="grid">
                                     <h5>Ayoub Karine</h5>
@@ -82,7 +93,7 @@
                                 </div>
                             </div>
 
-                            <div class="grid-membre">
+                            <div class="grid-membre" onclick="modal(this)">
                                 <img class="membre" src="images/membres/Maher-Jridi.png">
                                 <div class="grid">
                                     <h5>Maher Jridi</h5>
@@ -111,7 +122,7 @@
 
                         <div class="trapezoidR spe2"><div class="text-spe">Posts-docs</div></div>
                         <div class="flex-membres">
-                            <div class="grid-membre">
+                            <div class="grid-membre" onclick="modal(this)">
                                 <img class="membre" src="images/membres/Sylvain-Lefebvre.png">
                                 <div class="grid">
                                     <h5>Sylvain Lefebvre</h5>
@@ -124,7 +135,7 @@
 
                         <div class="trapezoidL spe3"><div class="text-spe">Doctorants actuels</div></div>
                         <div class="flex-membres">
-                            <div class="grid-membre">
+                            <div class="grid-membre" onclick="modal(this)">
                                 <img class="membre" src="images/membres/Salima-Bourbia.png">
                                 <div class="grid">
                                     <h5>Salima Bourbia</h5>
@@ -136,7 +147,7 @@
 
                         <div class="trapezoidR spe4"><div class="text-spe">Anciens Doctorants</div></div>
                         <div class="flex-membres">
-                            <div class="grid-membre">
+                            <div class="grid-membre" onclick="modal(this)">
                                 <img class="membre" src="images/membres/Djamel-Benarab.png">
                                 <div class="grid">
                                     <h5>Djamel Benarab</h5>
@@ -150,7 +161,7 @@
 
                         <div class="trapezoidL spe5"><div class="text-spe">Stagiaires</div></div>
                         <div class="flex-membres">
-                            <div class="grid-membre">
+                            <div class="grid-membre" onclick="modal(this)">
                                 <img class="membre" src="images/membres/Salima-Bourbia.png">
                                 <div class="grid">
                                     <h5>Salima Bourbia</h5>

@@ -819,7 +819,9 @@ div.degrade-horizontal {
   .img-zoom {
     position: fixed;
 }
-button {
+
+.buttonEdit,
+.addMember {
     border: none;
     color: white;
     padding: 16px 32px;
@@ -836,7 +838,8 @@ button {
     border: 2px solid #4CAF50;
 }
 
-button:hover {
+.buttonEdit:hover,
+.addMember:hover {
     background-color: #4CAF50;
     color: white;
 }

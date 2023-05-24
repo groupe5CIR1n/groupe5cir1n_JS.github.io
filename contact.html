@@ -6,11 +6,14 @@
         <link rel="icon" type="image/png" href="images/LOGO.png" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-        <link href="style.css" rel="stylesheet"> 
+        <link href="style.css" rel="stylesheet">
+        <link href="CSS/contact.css" rel="stylesheet">
         <script src="JS/general.js" defer></script>
+        <script src="JS/contact.js" defer></script>
     </head>
     <body oncopy="copy()">
         <div class="background"></div>
+
         <!-- Header -->
         <div id="header">
 
@@ -46,8 +49,19 @@
             </div>
         </div>
 
-        <!-- Content of the html. -->
+        <!-- Modal -->
+        <div id="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close" onclick="closeModal(this.parentNode.parentNode)">&times;</span>
+                <br>
 
+                <p>Oh nooooooon ! Alors que vous vous apprétiez à envoyer votre formulaire, celui-ci décide de prendre la fuite dans son super bolide ! Si vous souhaitez l'arrêter, il va falloir le rattraper. Cliquer sur la barre espace fera avancer votre super bolide (genre votre Tesla quoi), donc massacrez votre barre espace pour rattraper votre document ! Bon courage, camarade. o7</p>
+                <button id="startGame" onclick="startGame()">Démarrer la super course</button>
+            </div>
+        </div>
+
+        <!-- Content of the html. -->
         <h6 class="contact">Si vous avez besoin de contacter un des responsables du site, merci de rédiger ce formulaire.</h6>
 
         <div id="loaderZone"></div>
@@ -55,20 +69,16 @@
         
         <div class="flex-form">
             </div>
-                <form>
-                    <div  class="container">
+                <form onsubmit="theGame(event)">
+                    <div class="container">
                         <div class="ligne">
                             <span class="material-symbols-outlined">person</span>
                             <input type="text" placeholder="Votre nom et prénom">
                         </div>
-                    <!-- </div>
-                    <div  class="container"> -->
-                        <span class="material-symbols-outlined">alternate_email</span><input id="emailAddress" type="email" name="email" placeholder="Votre email">
-                    <!-- </div>
-                    <div  class="container"> -->
-                        <textarea id="subject" name="subject" placeholder="Votre message, (1000 caractères maximum)" style="height:200px"></textarea>
-                    
-                    <input type="submit" value="Envoyer">
+                            <span class="material-symbols-outlined">alternate_email</span><input id="emailAddress" type="email" name="email" placeholder="Votre email">
+                            <textarea id="subject" name="subject" placeholder="Votre message, (1000 caractères maximum)" style="height:200px"></textarea>
+                        
+                        <input type="submit" value="Envoyer">
                     </div>
                 </form>
             </div>

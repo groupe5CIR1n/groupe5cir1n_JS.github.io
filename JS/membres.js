@@ -97,10 +97,33 @@ function addMember() {
     grid.appendChild(tags);
     tags.appendChild(tag);
     gridMembre.appendChild(button);
+    
+    gridMembre.onclick = function() {modal(this)};
 }
 
 function deleteMembre() {
     this.parentNode.remove();
+}
+
+function modal(membre) {
+    var buttonAdd = document.getElementById("buttonEdit");
+    if (buttonAdd.innerHTML != "Edit mode") {
+        return;
+    }
+    var modal = document.getElementById("modal");
+    modal.style.display = "block";
+
+    var grid = modal.getElementsByClassName("modal-content")[0];
+    var membreDetails = membre.getElementsByClassName("grid-membre");
+    var membreCloned = membre.cloneNode(true);
+
+    grid.appendChild(membreCloned);
+}
+
+function closeModal(membre) {
+    membre.style.display = "none";
+    var membre = membre.getElementsByClassName("grid-membre")[0];
+    membre.remove();
 }
 
 function main() {

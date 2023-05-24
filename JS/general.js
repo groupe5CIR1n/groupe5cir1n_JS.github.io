@@ -1,12 +1,7 @@
 //ici on met toutes le fonctions générales à incorporer (tout ce qui concerne la navbar, le hooter ou tout ce que l'ont peut réutiliser);
 function main(){
-
-    // var changePOsitionBox = document.getElementsByTagName("title")[0].baseURI;
-    // console.log(changePOsitionBox);
-
     placeDate();
 
-    console.log("prout");
     var acc = document.getElementsByTagName("a")[0];
     var the = document.getElementsByTagName("a")[1];
     var pla = document.getElementsByTagName("a")[2];
