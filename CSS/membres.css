@@ -1,0 +1,88 @@
+.spe1 {
+    color: #7004FA;
+}
+
+.spe2 {
+    color: #7a06f9;
+}
+
+.spe3 {
+    color: #8208f8;
+}
+
+.spe4 {
+    color: #8a0bf7;
+}
+
+.spe5 {
+    color: #920ff6;
+}
+
+.spe6 {
+    color: #9a0ff5;
+    visibility: hidden;
+}
+
+.text-spe {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-membre {
+    display: grid;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    flex-basis: 20%;
+}
+
+.grid-membre:hover {
+    animation-name: membre-background;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes membre-background {
+    0% {background-color: white; color: black;}
+    100% {background-color: gray; color: white;}
+}
+
+.membre {
+    border-radius: 50%;
+    max-width: 200px;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+.description-membre {
+    text-align: center;
+}
+
+button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+
+button:hover {
+    background-color: #4CAF50;
+    color: white;
+}

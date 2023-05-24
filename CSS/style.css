@@ -1,0 +1,201 @@
+/* =====| BODY AND HEADER PART |===== */
+
+body {
+    /* background-image: url(images/background.png); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Header, which is the same for all the pages. */
+#header {
+    background-color: #FA0404;
+    box-shadow: 4px 4px 4px 4px white;
+}
+
+/* Attributes of links in the header. */
+#header a {
+    color: white;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+#header .flex-item-header_select {
+    color: #FA0404;
+}
+
+#header .flex-item-header_select a {
+    color: #FA0404;
+}
+
+/* Used to keep the same color even after clicking the links in the header. */
+.flex-header a:visited {
+    color: white;
+}
+
+/* flex used for the header. */
+.flex-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 0;
+    padding-left: 50px;
+    padding-right: 50px;
+    flex-wrap: wrap;
+}
+
+.flex-membres {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Attributes to have all flex items being the same. */
+.flex-item {
+    font-size: 28px;
+    background: none;
+    border: none;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: "Times New Roman";
+    font-style: italic;
+}
+
+
+.flex-item-header_select {
+    background-color: white;
+    font-size: 28px;
+    color: black;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 2px;
+    border: none;
+}
+
+a .flex-item-header_select {
+    color: #FA0404;
+}
+
+.dropdown button {
+    color: white;
+}
+
+/* Position needed for the hover and dropbars. */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    border: none;
+    color: white;
+}
+  
+/* Dropbar content (Hidden by default, shows when hover) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FA0404;
+    min-width: 160px;
+    box-shadow: 0px 18px 6px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+/* Changes to the links inside the dropbars. */
+.dropdown-content a {
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+
+    font-size: 22px;
+}
+  
+/* Items in the dropbar menu will change color on hover. */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+/* Animation to show the dropbar menu on hover. */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* =====| PART FOR h1 : USED TO SHOW TITLE OF PAGES |===== */
+.mouvmentblock{
+    width: 100px;
+    height: 20px;
+    background: red;
+    transition-property: width;
+    transition-duration: 1s;
+    transition-timing-function:cubic-bezier(0.175, 0.885, 0.32, 1.275) ;
+    grid-row-start: 2;
+}
+.mouvmentblock:hover {
+    width: 150px;
+}
+
+/* Used for titles in pages. */
+h1 {
+    text-align: left;
+    font-weight: normal;
+    font-size: 40px;
+    color: red;
+
+    background-color: #E9E3E3;
+    padding-bottom: 50px;
+
+    margin-left: 50px;
+    margin-right: 50px;
+
+    padding-top: 50px;
+    padding-left: 50px;
+
+    display:grid;
+    grid-template-columns: 1fr 75px;
+    grid-template-rows: repeat(2,auto);
+}
+
+
+/* =====| LOADER |===== */
+.loader {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: block;
+    margin:15px auto;
+    position: relative;
+    color: black;
+    box-sizing: border-box;
+    animation: animloader 2s linear infinite;
+  }
+  
+  @keyframes animloader {
+    0% {
+      box-shadow: 14px 0 0 -2px,  38px 0 0 -2px,  -14px 0 0 -2px,  -38px 0 0 -2px;
+    }
+    25% {
+      box-shadow: 14px 0 0 -2px,  38px 0 0 -2px,  -14px 0 0 -2px,  -38px 0 0 2px;
+    }
+    50% {
+      box-shadow: 14px 0 0 -2px,  38px 0 0 -2px,  -14px 0 0 2px,  -38px 0 0 -2px;
+    }
+    75% {
+      box-shadow: 14px 0 0 2px,  38px 0 0 -2px,  -14px 0 0 -2px,  -38px 0 0 -2px;
+    }
+    100% {
+      box-shadow: 14px 0 0 -2px,  38px 0 0 2px,  -14px 0 0 -2px,  -38px 0 0 -2px;
+    }
+  }
+
+  
+/* Changes to the links inside the dropbars. */
+.dropdown-content a {
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+
+    font-size: 22px;
+}
+  
