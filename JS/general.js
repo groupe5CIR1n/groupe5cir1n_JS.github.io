@@ -41,13 +41,21 @@ function RedirectClick(acces){
 }
 
 function MembreClick(){
-    alert("êtes vous sur de vouloir aller sur la page membre ?");
-    alert("Vraiment sûr ? ");
-    alert("VRAIMENT, vraiment sûr ?");
-    alert("pis c'étais dur a coder alors bif bof");
-    alert("bon ben si t'est sur ...");
-    alert("bon celui là il est juste là pour faire chier tkt");
-    RedirectClick("membres.html");
+    if(confirm("êtes vous sur de vouloir aller sur la page membre ?")==true){
+        if(confirm("Vraiment sûr ? ")==true){
+            if(confirm("Vraiment sûr ? ")==true){
+                if(confirm("VRAIMENT, vraiment sûr ?")==true){
+                    if(confirm("pis c'étais dur a coder alors bif bof")==true){
+                        if(confirm("bon ben si t'est sur ...")==true){
+                            alert("bon celui là il est juste là pour faire chier tkt");
+                            RedirectClick("membres.html");
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
 }
 
 function placeDate(){
@@ -85,6 +93,21 @@ function timer(){
 
 function copy() {
     console.log("Le non respect de droit d'auteur peut vous exposer à des potentielles poursuites en justice, et des sanctions pouvant aller jusqu'à 500.000€ d'amende et trois ans d'emprisonnement. Votre adresse IP a été enregistrée et envoyée aux forces de l'ordre. Bon courage. (:");
+}
+
+function copyNum(){
+    console.log("on tente d'appeler un n° !!! HAAAAAAAA");
+    var confirm = prompt("Eh lol, tu veux appeler se n° ?? Ben tu fait pas Ctrl+c, Ctrl+v dans ton tél espèce de geux ! tu le recopie là a la main (comme qq de goût) et tu valide !");
+    if(confirm=="0298038400" || confirm=="0230310320" || confirm=="0230130560" || confirm == "0299330436"){
+        console.log("on appelle le n°",confirm)
+        console.log("ptn il sait copier des trucs HHAAAA");
+        let sonnerie = new Audio("/JS/Sonnerie.mp3");
+        sonnerie.play();
+    }
+    else{
+        alert("lol le nul ! même pas capable de copier bien un n° !! vas y réessaye ^^");
+        console.log("erreur de saisie")
+    }
 }
 
 main();

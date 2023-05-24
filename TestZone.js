@@ -8,6 +8,9 @@ function main(){
     Test2.addEventListener('click',() =>  {RedirectClick("TestZone2.html");console.log("vroum vers TestZone2");});
 
     console.log(acc," ",Test2);
+
+    var songi = document.getElementsByTagName("a")[2];
+    songi.addEventListener('click',() =>  {song();console.log("let's play a song");});
     
 }
 function RedirectClick(acces){
@@ -21,5 +24,10 @@ function RedirectClick(acces){
     LoaderZone.innerHTML='<span class="loader"></span>';    
 }
 
+function song(){
+    let sonnerie = new Audio("/JS/Sonnerie.mp3");
+    sonnerie.play();
+    window.open("calling-page.html", "Calling", "height=50, width=50, menubar='yes'");
+}
 
 main();
