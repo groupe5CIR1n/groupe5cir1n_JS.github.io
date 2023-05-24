@@ -27,7 +27,7 @@ function RedirectClick(acces){
 function song(){
     let sonnerie = new Audio("/JS/Sonnerie.mp3");
     sonnerie.play();
-    window.open("calling-page.html", "Calling", "height=50, width=50, menubar='yes'");
+    window.open("calling-page.html", "Calling", "height=50", "width=100");
 }
 
 main();
