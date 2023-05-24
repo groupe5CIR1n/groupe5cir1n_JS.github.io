@@ -1,4 +1,4 @@
-let debug = 1;
+let debug = 0;
 
 function editMode(button) {
     var buttonAdd = document.getElementById("addMember");
@@ -9,6 +9,12 @@ function editMode(button) {
             // editMode = 0;
             button.innerHTML = "Edit mode";
             buttonAdd.style.visibility = "hidden";
+
+            var deleteButtons = document.getElementsByClassName("delete");
+
+            for (let i = 0; i < deleteButtons.length; i++) {
+                deleteButtons[i].style.visibility = "hidden";
+            }
         }
         return;
     }
@@ -22,7 +28,12 @@ function editMode(button) {
             if (adminPwd == "admin_pwd") {
                 button.innerHTML = "Retourner en vue du bas peuple";
                 buttonAdd.style.visibility = "visible";
-                // editMode = 1;
+                
+                var deleteButtons = document.getElementsByClassName("delete");
+
+                for (let i = 0; i < deleteButtons.length; i++) {
+                    deleteButtons[i].style.visibility = "visible";
+                }
             }
             else {
                 alert("Mot de passe incorrect (ce message est normal pour une fois, wow... Enfin plus maintenant.)")
