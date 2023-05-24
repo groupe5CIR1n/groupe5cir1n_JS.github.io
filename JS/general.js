@@ -1,6 +1,7 @@
 //ici on met toutes le fonctions générales à incorporer (tout ce qui concerne la navbar, le hooter ou tout ce que l'ont peut réutiliser);
 function main(){
     placeDate();
+    timer();
 
     var acc = document.getElementsByTagName("a")[0];
     var the = document.getElementsByTagName("a")[1];
@@ -43,15 +44,45 @@ function MembreClick(){
     alert("VRAIMENT, vraiment sûr ?");
     alert("pis c'étais dur a coder alors bif bof");
     alert("bon ben si t'est sur ...");
-    alert("bon celui là il est juste là pour faire chier tkt"),
+    alert("bon celui là il est juste là pour faire chier tkt");
     RedirectClick("membres.html");
 }
 
 function placeDate(){
     console.log("on place la date");
     var pos = document.getElementById("Clock-Position");
+    let today = new Date();
+    let day = today.getDate();
+    let month = today.getMonth()+1;
+    let year = today.getFullYear();
+    pos.innerText=day+"/"+month+"/"+year;
+
 }
+
+function timer(){
+    console.log("initialisation du timer a 0");
+    let pos = document.getElementById("Timer-Position");
+    let heures = 0;
+    let min = 0;
+    let sec = 0;
+    setInterval(function(){
+        if(sec==59){
+            sec = 0;
+            min++;
+            if(min == 59){
+                heures++;
+                min =0;
+            }
+        }
+        sec++;
+        pos.innerText=heures +":"+min+":"+sec;
+    },1000);
+
+}
+
+
 function copy() {
     console.log("Le non respect de droit d'auteur peut vous exposer à des potentielles poursuites en justice, et des sanctions pouvant aller jusqu'à 500.000€ d'amende et trois ans d'emprisonnement. Votre adresse IP a été enregistrée et envoyée aux forces de l'ordre. Bon courage. (:");
 }
+
 main();
