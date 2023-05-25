@@ -862,4 +862,12 @@ img#imgZoom{
 img#imgZoom:hover{
     transform: scale(1.5); /* Équivalent à scaleX(2) scaleY(0.5) */
     transform-origin: left;
-  }
+}
+
+#Timer-Position {
+    color:white;
+}
+
+#Clock-Position {
+    color:white;
+}

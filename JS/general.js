@@ -83,7 +83,30 @@ function timer(){
             }
         }
         sec++;
-        pos.innerText=heures +":"+min+":"+sec;
+        let resu ="";
+
+        if(heures<10){
+            resu = "0"+heures+":";
+        }
+        else{
+            resu = heure+":";
+        }
+
+        if(min<10){
+            resu = resu+"0"+min+":";
+        }
+        else{
+            resu = resu+min+":"
+        }
+
+        if(sec<10){
+            resu = resu+"0"+sec
+        }
+        else{
+            resu = resu+sec;
+        }
+        
+        pos.innerText=resu;
     },1000);
 
 }
