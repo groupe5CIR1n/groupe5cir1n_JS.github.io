@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="style.css" rel="stylesheet">
     <script src="JS/general.js" defer></script>
+    <script src="JS/publication.js" defer></script>
 </head>
     <body oncopy="copy()">
         <div class="background"></div>
@@ -54,6 +55,60 @@
         <div id="loaderZone"></div>
 
         <div class="grid-container gray-bg">
+            <table class="table table-bordered border-primary" id="table1">
+                <thead>
+                  <tr>
+                    <th scope="col">Auteur</th>
+                    <th scope="col">Titre de publication</th>
+                    <th scope="col">Date de publication</th>
+                    <th scope="col">Couleur du bouton</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Sélectionnez votre MasterMind</option>
+                            <option value="1">Ayoub Karin</option>
+                            <option value="2">Sébastien Puma</option>
+                            <option value="3">Emmanuel Sander</option>
+                            <option value="4">Matthieu Saumard</option>
+                            <option value="5">Isabelle Barbet</option>
+                            <option value="6">Aurélien Latouch</option>
+                            <option value="7">Thibault Napoléon</option>
+                            <option value="8">Maher Jridi</option>
+                            <option value="9">Salima Bourbia</option>
+                            <option value="10">Aladine Chetouani</option>
+                            <option value="11">Mohammed El Hassouni</option>
+                            <option value="12">Rémi Adde</option>
+                            <option value="13">Sébastien Demousselle</option>
+                            <option value="14">Sylvain Lefebvre</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Sélectionnez vos publications par leur titre</option>
+                            <option value="1">Reconsidering conceptual knowledge: Heterogeneity of its components</option>
+                            <option value="2">Semantic Images Segmentation for autonomous driving using Self-Attention Knowledge Distillation</option>
+                            <option value="3">No-reference Point Clouds Quality Assessment using Transformer and Visual Saliency</option>
+                            <option value="4">CONCEPTION ET DEVELOPPEMENT D'UNE VOITURE AUTONOME</option>
+                            <option value="5">Mutualisation des Ressources IOT par Conteneurisation de Passerelle</option>
+                    </td>
+                    <td>
+                        <form>
+                            <label>Publication avant le :</label>
+                            <input type="date" id="INdate">
+                        </form>
+                    </td>
+                    <td>
+                        <select id="selectedColor" class="form-select" aria-label="Default select example">
+                            <option selected>Sélectionnez type de marqueur</option>
+                            <option value="1" style="background-color: #c32b72">Revues </option>
+                            <option value="2" style="background-color: #196ca3">Conférences</option>
+                        </select>
+                    </td>
+                  </tr>
+                </table>
             <div class="flex-uncenter">
                 <p>
                     <span id="carre-revue"></span>
@@ -64,7 +119,7 @@
             </div>
             
             <div class="flex-uncenter">
-                <p>
+                <p class="">
                     <span id="carre-congres"></span>
                     Ayoub Karine, Thibault Napoléon, Maher Jridi.
                     <b>Semantic Images Segmentation for autonomous driving using Self-Attention Knowledge Distillation.</b>

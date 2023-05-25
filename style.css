@@ -53,9 +53,16 @@ body {
 
 /* Used for planAcces - Items aren't aligned at the center. */
 .flex-uncenter {
+    padding-left: 20px;
+    padding-right: 20px;
     display: flex;
     justify-content: space-around;
-    flex-grow: 0;
+    flex-grow: 0; 
+    transition: transform .9s;
+}
+  
+.flex-uncenter:hover{
+    transform: scale(1.05); /* Équivalent à scaleX(2) scaleY(0.5) */
 }
 
 .flex-tags {
@@ -154,6 +161,7 @@ a .flex-item-header_select {
 }
 
 .grid-container {
+    font-size: large;
     display: grid;
     row-gap: 20px;
     column-gap:20px;
@@ -294,6 +302,10 @@ p {
 form p{
     font-size: 5px;
     padding: 5px;
+}
+
+#filtre-Publi{
+    font-size: 20px;
 }
 
 /* Attributes of all links. */
