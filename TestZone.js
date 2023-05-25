@@ -11,6 +11,8 @@ function main(){
 
     var songi = document.getElementsByTagName("a")[2];
     songi.addEventListener('click',() =>  {song();console.log("let's play a song");});
+
+    //bigOrNot();
     
 }
 function RedirectClick(acces){
@@ -27,7 +29,9 @@ function RedirectClick(acces){
 function song(){
     let sonnerie = new Audio("/JS/Sonnerie.mp3");
     sonnerie.play();
-    window.open("calling-page.html", "Calling", "height=50", "width=100");
+    window.open("calling-page.html", "Calling", "width=250 height=250",);
 }
+
+
 
 main();

@@ -1,16 +1,119 @@
-function zoomIn(event) {
-    var element = document.getElementById("overlay");
-    element.style.display = "inline-block";
-    var img = document.getElementById("imgZoom");
-    const height = event.height*2;
-    var eventHeight = event.height;
+function main(){
+  slowiAppear();
+}
 
-    event.height = img.height*2;
-    event.width = img.width*2;
+function slowiAppear(){
+  console.log("BOUP BIP Mise en place du texte BIPPPP");
+  let txt = "L’équipe « Vision et Analyse de Données » est une équipe du laboratoire L@bISEN de l’ISEN Yncréa Ouest. L’équipe mène une activité de R&D pour la conception de plateformes technologiques d’observations et d’analyses à partir de réseaux de capteurs intelligents."
+  var pos = document.getElementById("Slow");
+  let i =0;
   
-  }
-  
-  function zoomOut(elem) {
-    elem.height = elem.height/2;
-    elem.width = elem.width/2;
-  }
+  var Boup = setInterval(function(){
+    if(i==261){
+      clearInterval(Boup);
+      Compact();
+    }
+    else{
+      let replace="";
+      for(let j=0;j<i;j++){
+        replace = replace+txt[j];
+      }
+      pos.innerText=replace;
+      i++;
+    }
+
+  },500);
+
+}
+
+function Compact(){
+  console.log("Boup Bip, AU CENNNNTTTTRREEE");
+  var pos = document.getElementById("Slow");
+  let i =0;
+  var Bip = setInterval(function(){
+    if(i<25){
+      pos.style.paddingLeft=i*10+"px";
+      pos.style.paddingRight=i*10+"px";
+      i++;
+    }
+    else{
+      moovRight();
+      clearInterval(Bip);
+    }
+  },500);
+}
+
+function moovRight(){
+  console.log("Boup Bip, A GAUUUUUUCHHHHEEE");
+  var pos = document.getElementById("Slow");
+  let i =0;
+  var Bip = setInterval(function(){
+    if(i<25){
+      pos.style.paddingLeft=250-i*10+"px";
+      pos.style.paddingRight=250+i*10+"px";
+      i++;
+    }
+    else{
+      moovLeft();
+      clearInterval(Bip);
+    }
+  },500);
+}
+
+function moovLeft(){
+  console.log("Boup Bip, A DROITE");
+  var pos = document.getElementById("Slow");
+  let i =0;
+  var Bip = setInterval(function(){
+    if(i<50){
+      pos.style.paddingLeft=10+i*10+"px";
+      pos.style.paddingRight=490-i*10+"px";
+      i++;
+    }
+    else{
+      goBackCenter();
+      clearInterval(Bip);
+    }
+  },500);
+}
+
+function goBackCenter(){
+  console.log("Boup Bip, AU CENTRE ");
+  var pos = document.getElementById("Slow");
+  pos.style.paddingRight="5px";
+  let i =0;
+  var Bip = setInterval(function(){
+    if(i<50){
+      pos.style.paddingLeft=500-i*10+"px";
+      i++;
+    }
+    else{
+      pos.style.paddingLeft="5px";
+      AdiosWord();
+      clearInterval(Bip);
+    }
+  },500);
+}
+
+function AdiosWord(){
+  console.log("BIIIIIIIPP ON RETIRE TOUT MUAHAHAHAHAHAHAH !");
+  var pos = document.getElementById("Slow");
+  let i=0;
+  var Boup = setInterval(function(){
+    if(i==261){
+      slowiAppear();
+      clearInterval(Boup);
+    }
+    else{
+      console.log("ET ON RECOMMENCE !!! ")
+      let txt = pos.textContent;
+      txt = txt.slice(0, txt.length - 1);
+      pos.innerText=txt;
+      i++;
+    }
+  },500);
+}
+
+
+
+main();

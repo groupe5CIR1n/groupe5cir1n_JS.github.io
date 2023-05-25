@@ -854,3 +854,12 @@ div.degrade-horizontal {
 .delete:hover {
     background-color: red;
 }
+
+img#imgZoom{
+    transition: transform .9s;
+  }
+  
+img#imgZoom:hover{
+    transform: scale(1.5); /* Équivalent à scaleX(2) scaleY(0.5) */
+    transform-origin: left;
+  }

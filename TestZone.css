@@ -51,3 +51,11 @@ div#message {
   line-height: 100px;
 }
 
+img{
+  transition: transform .9s;
+}
+
+img:hover{
+  transform: scale(2); /* Équivalent à scaleX(2) scaleY(0.5) */
+  transform-origin: left;
+}

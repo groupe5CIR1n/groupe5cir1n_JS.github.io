@@ -101,10 +101,14 @@ function copyNum(){
         console.log("ptn il sait copier des trucs HHAAAA");
         let sonnerie = new Audio("/JS/Sonnerie.mp3");
         sonnerie.play();
+        window.open("calling-page.html", "Calling", "width=250 height=250",); 
     }
     else{
         alert("lol le nul ! même pas capable de copier bien un n° !! vas y réessaye ^^");
-        console.log("erreur de saisie")
+        console.log("erreur de saisie");
+    }
+    if(confirm=="02 98 03 84 00" || confirm=="02 30 31 03 20" || confirm=="02 30 13 05 60" || confirm == "02 99 33 04 36"){
+        alert("HA HA !! Le pôtit malin, il a copié collé !! bah nan, je les veux collé moi les chiffres, bient tenté !");
     }
 }
 
