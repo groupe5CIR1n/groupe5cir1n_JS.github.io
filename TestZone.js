@@ -12,8 +12,7 @@ function main(){
     var songi = document.getElementsByTagName("a")[2];
     songi.addEventListener('click',() =>  {song();console.log("let's play a song");});
 
-    //bigOrNot();
-    
+    //bigOrNot();    
 }
 function RedirectClick(acces){
     setTimeout(function(){window.location.href=acces},2000);
