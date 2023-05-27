@@ -58,46 +58,17 @@
             <table class="table table-bordered border-primary" id="table1">
                 <thead>
                   <tr>
-                    <th scope="col">Auteur</th>
-                    <th scope="col">Titre de publication</th>
-                    <th scope="col">Date de publication</th>
-                    <th scope="col">Couleur du bouton</th>
+                    <th scope="col">Couleur</th>
+                    <th scope="col">Dates</th>
                   </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                        <!-- <select class="form-select" aria-label="Default select example" multiple>
-                            <option value="1">Ayoub Karin</option>
-                            <option value="2">Sébastien Puma</option>
-                            <option value="3">Emmanuel Sander</option>
-                            <option value="4">Matthieu Saumard</option>
-                            <option value="5">Isabelle Barbet</option>
-                            <option value="6">Aurélien Latouch</option>
-                            <option value="7">Thibault Napoléon</option>
-                            <option value="8">Maher Jridi</option>
-                            <option value="9">Salima Bourbia</option>
-                            <option value="10">Aladine Chetouani</option>
-                            <option value="11">Mohammed El Hassouni</option>
-                            <option value="12">Rémi Adde</option>
-                            <option value="13">Sébastien Demousselle</option>
-                            <option value="14">Sylvain Lefebvre</option>
+                    <td>
+                        <select id="selectedYear" class="form-select" aria-label="Default select example">
+                            <option selected>Sélectionnez Année</option>
+                            <option value="1">2022</option>
+                            <option value="2">2023</option>
                         </select>
-                    </td>
-                    <td>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Sélectionnez vos publications par leur titre</option>
-                            <option value="1">Reconsidering conceptual knowledge: Heterogeneity of its components</option>
-                            <option value="2">Semantic Images Segmentation for autonomous driving using Self-Attention Knowledge Distillation</option>
-                            <option value="3">No-reference Point Clouds Quality Assessment using Transformer and Visual Saliency</option>
-                            <option value="4">CONCEPTION ET DEVELOPPEMENT D'UNE VOITURE AUTONOME</option>
-                            <option value="5">Mutualisation des Ressources IOT par Conteneurisation de Passerelle</option>
-                    </td> -->
-                    <td>
-                        <form>
-                            <label>Publication avant le :</label>
-                            <input type="date" id="INdate">
-                        </form>
                     </td>
                     <td>
                         <select id="selectedColor" class="form-select" aria-label="Default select example">
@@ -107,9 +78,61 @@
                         </select>
                     </td>
                 </tr>
+                </tbody>
+            </table>
+            <table class="table table-bordered border-primary" id="table2">
+                <thead>
+                <tr>
+                    <th scope="cole">Auteurs</th>
+                </tr>
+                <tbody>
+                    <td>
+                        <fieldset>                        
+                            <div>
+                              <input type="checkbox" id="scales" name="Sébastien Puma"><label>Sébastien Puma</label>
+                              <input type="checkbox" id="horns" name="Emmanuel Sander"><label>Emmanuel Sander</label>
+                              <input type="checkbox" id="horns" name="Matthieu Saumard"><label>Matthieu Saumard</label>
+                              <input type="checkbox" id="horns" name="Isabelle Barbet"><label>Isabelle Barbet</label>
+                              <input type="checkbox" id="horns" name="Aurélien Latouche"><label>Aurélien Latouche</label>
+                              <input type="checkbox" id="horns" name="Ayoub Karine"><label>Ayoub Karine</label>
+                              <input type="checkbox" id="horns" name="Thibault Napoléon"><label>Thibault Napoléon</label>
+                              <input type="checkbox" id="horns" name="Maher Jridi"><label>Maher Jridi</label>
+                              <input type="checkbox" id="horns" name="Salima Bourbia"><label>Salima Bourbia</label>
+                              <input type="checkbox" id="horns" name="Aladine Chetouani"><label>Aladine Chetouani</label>
+                              <input type="checkbox" id="horns" name="Mohammed El Hassouni"><label>Mohammed El Hassouni</label>
+                              <input type="checkbox" id="horns" name="Rémi Adde"><label>Rémi Adde</label>
+                              <input type="checkbox" id="horns" name="Sébastien Demousselle"><label>Sébastien Demousselle</label>
+                              <input type="checkbox" id="horns" name="Sylvain Lefebvre"><label>Sylvain Lefebvre</label>
+                            </div>
+                            <button id="validAutors">Valider</button>
+                        </fieldset>
+                    </td>
+                </tbody>
+            </thead>
+            </table>
+            <table class="table table-bordered border-primary" id="table2">
+                <thead>
+                <tr>
+                    <th scope="cole">Articles</th>
+                </tr>
+                <tbody>
+                    <td>
+                        <fieldset>                        
+                            <div>
+                              <div><input type="checkbox" id="scales" name="actu1"><label>Reconsidering conceptual knowledge: Heterogeneity of its components</label></div>
+                              <div><input type="checkbox" id="horns" name="actu2"><label>Semantic Images Segmentation for autonomous driving using Self-Attention Knowledge Distillationr</label></div>
+                              <div><input type="checkbox" id="horns" name="actu3"><label>No-reference Point Clouds Quality Assessment using Transformer and Visual Saliency</label></div>
+                              <div><input type="checkbox" id="horns" name="actu4"><label>CONCEPTION ET DEVELOPPEMENT D'UNE VOITURE AUTONOME</label></div>
+                              <div><input type="checkbox" id="horns" name="actu5"><label>Mutualisation des Ressources IOT par Conteneurisation de Passerelle.</label></div>
+                            </div>
+                            <button id="validAutors">Valider</button>
+                        </fieldset>
+                    </td>
+                </tbody>
+            </thead>
             </table>
             <div id="place-for-article">
-                <div class="flex-uncenter c32b72">
+                <div class="flex-uncenter c32b72  2023">
                     <p>
                         <span id="carre-revue"></span>
                         Sébastien Puma, Emmanuel Sander, Matthieu Saumard, Isabelle Barbet, Aurélien Latouche:
@@ -118,7 +141,7 @@
                     </p>
                 </div>
                 
-                <div class="flex-uncenter 196ca3">
+                <div class="flex-uncenter 196ca3 2022">
                     <p class="">
                         <span id="carre-congres"></span>
                         Ayoub Karine, Thibault Napoléon, Maher Jridi.
@@ -127,7 +150,7 @@
                     </p>
                 </div>
     
-                <div class="flex-uncenter 196ca3">
+                <div class="flex-uncenter 196ca3 2022">
                     <p>
                         <span id="carre-congres"></span>
                         Salima Bourbia, Ayoub Karine, Aladine Chetouani, Mohammed El Hassouni, Maher Jridi.
@@ -136,7 +159,7 @@
                     </p>
                 </div>
     
-                <div class="flex-uncenter c32b72">
+                <div class="flex-uncenter c32b72 2022">
                     <p>
                         <span id="carre-revue"></span>
                         Ayoub Karine, Maher Jridi, Rémi Adde, Sébastien Demousselle.
@@ -145,7 +168,7 @@
                     </p>
                 </div>
     
-                <div class="flex-uncenter c32b72">
+                <div class="flex-uncenter c32b72 2022">
                     <p>
                         <span id="carre-revue"></span>
                         Sylvain Lefebvre, Maher Jridi.
@@ -158,7 +181,7 @@
         </div>
         
 
-        <div class="carre-revue c32b72"></div>
+        <div class="carre-revue c32b72 2022"></div>
 
         <br>
         <!-- Footer -->

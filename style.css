@@ -1002,4 +1002,13 @@ a.closebtn{
   text-decoration: none;
   cursor: pointer;
   }
+
+  table
+{
+margin: auto;
+}
+td
+{
+text-align :center;
+}
   
