@@ -75,12 +75,15 @@
                     <div class="container">
                         <div class="ligne">
                             <span class="material-symbols-outlined">person</span>
-                            <input type="text" placeholder="Votre nom et prénom">
+                            <input type="text" placeholder="Votre nom et prénom" onkeyup="textAreas()" id ="inName">
+                            <p class="errorForm">Le champ nom et prénom doit être composé de deux mots séparés par un espace !</p>
                         </div>
-                            <span class="material-symbols-outlined">alternate_email</span><input id="emailAddress" type="email" name="email" placeholder="Votre email">
-                            <textarea id="subject" name="subject" placeholder="Votre message, (1000 caractères maximum)" style="height:200px"></textarea>
+                            <span class="material-symbols-outlined">alternate_email</span><input id="emailAddress" type="email" name="email" placeholder="Votre email"onkeyup="textAreas()">
+                            <p class="errorForm">Le champ d'adresse mail doit posséder un @ et un point !</p>
+                            <textarea id="subject" onkeyup="textAreas()" name="subject" placeholder="Votre message, (1000 caractères maximum)" style="height:200px"></textarea>
+                            <p class="errorForm">Le message doit contenir entre 20 et 1000 caractères !</p>
                         
-                        <input type="submit" value="Envoyer">
+                        <input type="submit" value="Envoyer" id="submit" disabled>
                     </div>
                 </form>
             </div>

@@ -6,7 +6,6 @@ function editMode(button) {
         var confirm = prompt("Sûr sûr ? En effectuant cette action, vous allez retourner dans la vue des gueux, et non pas de la puissance administrative ! (Y pour oui)", "L + ratio + palu");
         
         if (confirm == "Y") {
-            // editMode = 0;
             button.innerHTML = "Edit mode";
             buttonAdd.style.visibility = "hidden";
 
@@ -41,6 +40,16 @@ function editMode(button) {
         }
         else {
             alert("Bien tenté brigand !");
+        }
+    }
+}
+
+function newMemberName(membre) {
+    var button = document.getElementById("buttonEdit");
+    if (button.innerHTML == "Retourner en vue du bas peuple") {
+        var newName = prompt("Entrez ci-dessous le nouveau nom à donner au membre " + membre.innerHTML, "nouveauNom");
+        if (newName != null) {
+            membre.innerHTML = newName;
         }
     }
 }
