@@ -1,8 +1,9 @@
 function main(){
-  slowiAppear();
+  let vitesse = 25;
+  slowiAppear(vitesse);
 }
 
-function slowiAppear(){
+function slowiAppear(vit){
   console.log("BOUP BIP Mise en place du texte BIPPPP");
   let txt = "L’équipe « Vision et Analyse de Données » est une équipe du laboratoire L@bISEN de l’ISEN Yncréa Ouest. L’équipe mène une activité de R&D pour la conception de plateformes technologiques d’observations et d’analyses à partir de réseaux de capteurs intelligents."
   var pos = document.getElementById("Slow");
@@ -11,7 +12,7 @@ function slowiAppear(){
   var Boup = setInterval(function(){
     if(i==261){
       clearInterval(Boup);
-      Compact();
+      Compact(vit);
     }
     else{
       let replace="";
@@ -22,11 +23,11 @@ function slowiAppear(){
       i++;
     }
 
-  },500);
+  },vit);
 
 }
 
-function Compact(){
+function Compact(vit){
   console.log("Boup Bip, AU CENNNNTTTTRREEE");
   var pos = document.getElementById("Slow");
   let i =0;
@@ -37,13 +38,13 @@ function Compact(){
       i++;
     }
     else{
-      moovRight();
+      moovRight(vit);
       clearInterval(Bip);
     }
-  },500);
+  },vit);
 }
 
-function moovRight(){
+function moovRight(vit){
   console.log("Boup Bip, A GAUUUUUUCHHHHEEE");
   var pos = document.getElementById("Slow");
   let i =0;
@@ -54,13 +55,13 @@ function moovRight(){
       i++;
     }
     else{
-      moovLeft();
+      moovLeft(vit);
       clearInterval(Bip);
     }
-  },500);
+  },vit);
 }
 
-function moovLeft(){
+function moovLeft(vit){
   console.log("Boup Bip, A DROITE");
   var pos = document.getElementById("Slow");
   let i =0;
@@ -71,13 +72,13 @@ function moovLeft(){
       i++;
     }
     else{
-      goBackCenter();
+      goBackCenter(vit);
       clearInterval(Bip);
     }
-  },500);
+  },vit);
 }
 
-function goBackCenter(){
+function goBackCenter(vit){
   console.log("Boup Bip, AU CENTRE ");
   var pos = document.getElementById("Slow");
   pos.style.paddingRight="5px";
@@ -89,19 +90,21 @@ function goBackCenter(){
     }
     else{
       pos.style.paddingLeft="5px";
-      AdiosWord();
+      AdiosWord(vit);
       clearInterval(Bip);
     }
-  },500);
+  },vit);
 }
 
-function AdiosWord(){
+function AdiosWord(vit){
+  
   console.log("BIIIIIIIPP ON RETIRE TOUT MUAHAHAHAHAHAHAH !");
   var pos = document.getElementById("Slow");
+  pos.style.paddingRight="5px";
   let i=0;
   var Boup = setInterval(function(){
     if(i==261){
-      slowiAppear();
+      slowiAppear(vit);
       clearInterval(Boup);
     }
     else{
@@ -111,7 +114,7 @@ function AdiosWord(){
       pos.innerText=txt;
       i++;
     }
-  },500);
+  },vit);
 }
 
 

@@ -12,8 +12,16 @@ function main(){
     var songi = document.getElementsByTagName("a")[2];
     songi.addEventListener('click',() =>  {song();console.log("let's play a song");});
 
-    //bigOrNot();    
+    var colo = document.querySelector('select');
+    colo.addEventListener('change', function () {
+        console.log('selectedIndex => '+this.selectedIndex);
+        let colo=["","#c32b72","#196ca3"];
+        document.body.style.backgroundColor=colo[this.selectedIndex];
+    })
 }
+
+
+
 function RedirectClick(acces){
     setTimeout(function(){window.location.href=acces},2000);
     
@@ -30,7 +38,6 @@ function song(){
     sonnerie.play();
     window.open("calling-page.html", "Calling", "width=250 height=250",);
 }
-
 
 
 main();

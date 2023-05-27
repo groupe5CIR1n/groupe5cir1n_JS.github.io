@@ -56,6 +56,14 @@ img{
 }
 
 img:hover{
-  transform: scale(2); /* Équivalent à scaleX(2) scaleY(0.5) */
+  transform: scale(1.2); /* Équivalent à scaleX(2) scaleY(0.5) */
   transform-origin: left;
+}
+
+body {
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+
 }

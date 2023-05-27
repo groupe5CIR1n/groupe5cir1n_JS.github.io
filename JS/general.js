@@ -63,7 +63,25 @@ function placeDate(){
     let day = today.getDate();
     let month = today.getMonth()+1;
     let year = today.getFullYear();
-    pos.innerText=day+"/"+month+"/"+year;
+
+    let fin ="";
+    if(day<9){
+        fin="0"+day+"/";
+    }
+    else{
+        fin = day+"/";
+    }
+
+    if(month<9){
+        fin = fin+"0"+(month)+"/";
+    }
+    else{
+        fin = fin+(month)+"/";
+    }
+
+    fin = fin+year;
+
+    pos.innerText=fin;
 
 }
 
