@@ -1,6 +1,5 @@
 function main(){
     var title = document.getElementsByTagName("h7")[0];
-    console.log(title);
 
     var bouh=document.getElementById("Bouh");
     bouh.innerHTML="<img src='/JS/derpi.gif' id='derp' width='500px' height='500px'>";

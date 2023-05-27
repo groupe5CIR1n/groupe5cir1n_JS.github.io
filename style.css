@@ -24,10 +24,12 @@ body {
 
 #header .flex-item-header_select {
     color: #FA0404;
+
 }
 
 #header .flex-item-header_select a {
     color: #FA0404;
+    cursor:pointer;
 }
 
 /* Used to keep the same color even after clicking the links in the header. */
@@ -110,7 +112,8 @@ body {
     margin-left: 20px;
     margin-right: 20px;
     font-family: "Times New Roman";
-    font-style: italic;
+    font-style: italic;    
+    cursor:pointer;
 }
 
 .flex-item-header_select {
@@ -121,10 +124,12 @@ body {
     padding-right: 25px;
     padding-bottom: 2px;
     border: none;
+    cursor:pointer;
 }
 
 a .flex-item-header_select {
     color: #FA0404;
+    cursor:pointer;
 }
 
 .dropdown button {
@@ -147,6 +152,7 @@ a .flex-item-header_select {
     min-width: 160px;
     box-shadow: 0px 18px 6px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    cursor:pointer
 }
   
 /* Changes to the links inside the dropbars. */
@@ -157,11 +163,13 @@ a .flex-item-header_select {
     display: block;
 
     font-size: 22px;
+    cursor:pointer
 }
   
 /* Items in the dropbar menu will change color on hover. */
 .dropdown-content a:hover {
     background-color: #ddd;
+    cursor:pointer
 }
   
 /* Animation to show the dropbar menu on hover. */
@@ -187,7 +195,7 @@ a .flex-item-header_select {
 }
 
 .mouvmentblock:hover {
-    width: 150px;
+    width: 250px;
 }
 
 /* Used for titles in pages. */
@@ -299,7 +307,7 @@ input[type=submit]:hover {
     padding:20px;
     width: 100%;
     /* redéfinition 400 + 2*20 */
-    max-width: 440px;
+    max-width: 1000px;
     margin:0 auto;
   }
 
@@ -632,8 +640,9 @@ h7{
 
 img#image{
     image-rendering: optimizeQuality;
-    padding-left: 20px;
-    padding-right: auto;
+    margin: auto;
+    display: flex;
+    justify-content: center;
 }
 
 #card-two{
@@ -746,6 +755,7 @@ div.material-symbols-outlined {
 }
 
 
+
 /* footer */
 
 .grid-container-footer {
@@ -809,12 +819,9 @@ div.degrade-horizontal {
 
 #overlay {
     border: 1px solid black;
-    /* width: 480px;
-    height: 450px; */
     position: absolute;
     display: inline-block;
     background-image: url('images/competences.jpg');
-    /* background-repeat: no-repeat; */
   }
 
   #topBtn {
@@ -877,19 +884,118 @@ div.degrade-horizontal {
 }
 
 img#imgZoom{
-    transition: transform .9s;
+    transition: transform 9.s;
   }
   
 img#imgZoom:hover{
-    transform: scale(1.5); /* Équivalent à scaleX(2) scaleY(0.5) */
     transform-origin: left;
 }
 
 #Timer-Position {
     color:white;
+    cursor:default;
 }
 
 #Clock-Position {
     color:white;
+    cursor:default;
 }
 
+a.closebtn{
+    background-color: initial;
+  }
+  
+  div#pop-out {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255,.2);
+    width: 100%;
+    height: 100%;
+    /* z-index: 1; */
+    display: none;
+  }
+  div#message {
+    width: 50%;
+    height: 100px;
+    margin: 0 auto;
+    border: 1px solid red;
+    text-align: center;
+    line-height: 100px;
+  }
+  
+  img{
+    transition: transform .9s;
+  }
+  
+  img:hover{
+    transform: scale(1.2); /* Équivalent à scaleX(2) scaleY(0.5) */
+  }
+  
+  body {
+    -webkit-transition: background-color 2s ease-out;
+    -moz-transition: background-color 2s ease-out;
+    -o-transition: background-color 2s ease-out;
+    transition: background-color 2s ease-out;
+  
+  }
+  
+  /* Décrire l'animation */
+  @keyframes slideDownFadeIN {
+    from {top:-100px;opacity: 0;}
+    to {top:0px;opacity:1;}
+  }
+  
+  /* Foncer l'arrière-plan de la fenêtre modale */
+  .modal {
+  display: none; 
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding:20px
+  }
+  
+  /* Afficher la fenêtre modale lorsqu'elle est ciblée par un lien supprimer */
+  .modal:target {
+  display: table;
+  position: absolute;
+  }
+  
+  /* la fenêtre modale  */
+  .modal-dialog {
+  display: table-cell;
+  vertical-align: middle;
+  }
+  
+  /* Le contenu de la modale */
+  .modal-dialog .modal-content {
+  margin: auto;
+  background-color: #f3f3f3;
+  /* position: relative; */
+  border: 1px #777 solid;
+  width: 60%;
+  
+  animation-name: slideDownFadeIN;
+  animation-duration: 0.5s;
+  padding:15px
+  }
+  
+  /* Bouton servant à fermer la fenêtre modale */
+  .closebtn {
+  text-decoration: none;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  }
+  
+  .closebtn:hover,
+  .closebtn:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+  }
+  

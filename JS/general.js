@@ -9,7 +9,7 @@ function main(){
     var mem = document.getElementsByTagName("a")[3];
     var pro = document.getElementsByTagName("a")[4];
     var pub = document.getElementsByTagName("a")[5];
-
+    var par = document.getElementsByTagName("a")[6];
     var con = document.getElementsByTagName("a")[7];
     var pln = document.getElementsByTagName("a")[8];
     var off = document.getElementsByTagName("a")[9];
@@ -20,6 +20,7 @@ function main(){
     mem.addEventListener("click",()=>MembreClick());
     pro.addEventListener("click",()=>RedirectClick("projets.html"));
     pub.addEventListener("click",()=>RedirectClick("publications.html"));
+    par.addEventListener("click",()=>RedirectClick("partenaires.html"));
     con.addEventListener("click",()=>RedirectClick("contact.html"));
     pln.addEventListener("click",()=>RedirectClick("planAcces.html"));
     off.addEventListener("click",()=>RedirectClick("offresDEmploi.html"));  

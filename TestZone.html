@@ -24,7 +24,32 @@
             <option value="1" style="background-color: #c32b72" >Revues </option>
             <option value="2" style="background-color: #196ca3" >Conférences</option>
         </select>
+        </br>
         <a>EHHHHHH  CLIQUE ICI POUR VOIR (mais pas trop fort stp)</a>
+        <div id="modalZone"></div>
+
+        <a href="#f1" onclick="addInModal('f1')">Ouvrir la f1</a>
+        <a href="#f1" onclick="addInModal('f2')">Ouvrir la f2</a>
+
+        <div id="f1" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <header class="container"> 
+                        <a href="#" class="closebtn">×</a>
+                        <!-- zone de titre -->
+                        <div id="TitlePlace">
+                            titre
+                        </div>
+                    </header>
+                    <div class="container" id="container">
+                        <!-- zone de contenu -->
+                        test
+                    </div>
+                    <div id="imagePos">
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div id="loaderZone"></div>
     </body>
