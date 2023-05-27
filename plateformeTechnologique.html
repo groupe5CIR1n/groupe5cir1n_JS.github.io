@@ -50,7 +50,25 @@
         </div>
 
         <!-- Content of the html. -->
-       
+        <div id="mod" class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <header class="container"> 
+                        <a href="#" class="closebtn">×</a>
+                        <!-- zone de titre -->
+                        <div id="TitlePlace"></div>
+                    </header>
+                </br>
+                    <div id="imagePos"><!-- zone de l'image --></div>
+                </br>
+                    <div class="container" id="container">
+                        <!-- zone de contenu -->
+                    </div>
+                </br>
+                </div>
+            </div>
+        </div>
+
         <h1>Plateforme technologiques :<div class="mouvmentblock"></div></h1>
         <div id="loaderZone"></div>
         
@@ -59,29 +77,23 @@
                 Les travaux de l’équipe débouchent souvent sur une preuve de concept, une réalisation de prototypes ou undéploiement de plateformes technologiques. Ces plateformes sont à la fois un outil interne pour mener desexpérimentations et aussi un moyen de communication vers nos partenaires.
             </p>
         </div>
-
-        <div role="dialog" aria-modal="true" aria-labelledby="modal-heading">
-            <button>Fermer</button>
-            <h1 id="modal-heading">[Titre de la modale]</h1>
-            [Contenu de la modale]
-          </div>
-
+        
         </br>
         
         <div class="techno-flex">
             <div id="card-one">
-                <h4>Environnement Hybride connectés :</h4>
+                <h4><a href="#mod" onclick="createModal('card-one')">Environnement Hybride connectés :</a></h4>
                 <p>
                     Cette plateforme est en cours de développement et vise à offrirdes services à la personne dans des environnements indoor (bureau connecté, école connectée, usineconnectée, ...). Parmi les services, nous envisageons l’étude du comportement des personnes, ladétection d’anomalies et la sécurité de l’environnement. Deux enjeux majeurs sont traités : (1)l’application des algorithmes d’intelligence artificielle qui prend tout son sens pour la prédictiond’évènements à risque ; (2) la mise en place de moyens numériques interopérables comme unearchitecture réseau dédiée et des technologies d’acquisition et de communications standardspermettant l’accès aux données et la centralisation/distribution de la prise de décision.Pour cette plateforme nous disposons de moyens de calcul intensif comme le serveur GPU pour fairedu FoG computing qui présente une alternative intéressante par rapport au cloud pour des raisons desécurité de données et de coût.
                 </p>
                 <img id="image" src="images/Plateforme technologique/Environnement hybride connecté.jpg" title="environement hybride connecté" width="335" height="240" >
             </div>
             <div id="card-two">
-                <h4>Chambre connectée (living lab) :</h4>
+                <h4><a href="#mod" class="platfo" onclick="createModal('card-two')">Chambre connectée (living lab) :</a></h4>
                 <p>
                     Le living Lab est le fruit de collaboration avec l’entreprise demutuelle santé Malakoff Médéric. Initialement, ce Living Lab avait pour but de détecter la chute despersonnes âgées sans utiliser de capteurs portés (bracelet, médaillon...). Une solution a été proposéeen utilisant un capteur de type Kinect permettant de garantir le respect de la vie privée et deconnaitre à chaque instant la position de la personne dans le studio. Afin d'étendre les possibilités dustudio, un ensemble de capteurs ont été ajoutés : prises connectées, capteurs d'environnements,température, lumière, humidité, gaz...), capteurs de consommation (électricité, eau), Caméras, microet haut parleurs.Plusieurs scénarios ont été mis en place pour utiliser les données des différents capteurs et envoyerune alarme (sms, mail) en cas de chute ou si la personne reste trop longtemps allongée sur le sol, encas de détection d'anomalie (pas suffisamment de consommation d'eau en fonction d'unetempérature trop élevée...). Ce démonstrateur permet également de visualiser les données desdifférents capteurs en temps réel et à distance, en se connectant sur un site web.Les travaux futurs en lien avec cette plateforme à développer de scénarios en conditions "réelles"dans des EPHAD par exemple pour contribuer dans la prise en charge des risques liés aux personnesen situation de dépendance (déshydratation, comportement, chutes...)
                 </p>
-                <img id="image" src="images/Plateforme technologique/visite-virtuelle-1024x485.jpg" title="chambre connectée" width="280" height="180">
+                <img id="image" class="platfo" src="images/Plateforme technologique/visite-virtuelle-1024x485.jpg" title="chambre connectée" width="280" height="180">
             </div>
         </div>
 

@@ -1,12 +1,12 @@
-function main(){
-    var art1 = document.getElementById("card-one");
-    var art2 = document.getElementById("card-two");
-
-    art1.addEventListener('click',()=>createModal("card-one"));
-    art2.addEventListener('click',()=>createModal("card-two"));
-}
-
 function createModal(card){
-    var coped = document.getElementById(card);
+    var title = document.getElementById("TitlePlace");
+    var texte = document.getElementById("container");
+    var img = document.getElementById("imagePos");
+
+    var pos = document.getElementById(card);
+    console.log(pos.children);
+    title.innerHTML=pos.children[0].outerHTML;
+    texte.innerHTML=pos.children[1].outerHTML;
+    img.innerHTML=pos.children[2].outerHTML;
     
 }

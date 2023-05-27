@@ -17,8 +17,7 @@ function main(){
         console.log('selectedIndex => '+this.selectedIndex);
         let colo=["","#c32b72","#196ca3"];
         document.body.style.backgroundColor=colo[this.selectedIndex];
-    })
-
+    });
 }
 
 
@@ -38,6 +37,23 @@ function song(){
     let sonnerie = new Audio("/JS/Sonnerie.mp3");
     sonnerie.play();
     window.open("calling-page.html", "Calling", "width=250 height=250",);
+}
+
+function addInModal(link){
+    var title = document.getElementById("TitlePlace");
+    var texte = document.getElementById("container");
+    var img = document.getElementById("imagePos");
+
+    if(link == "f1"){
+        texte.innerHTML="HOALLALALAL !! ";
+        img.innerHTML='<img src="/JS/cat-space.gif" widht="20px" heigth="20px"></img>';
+        console.log("rear");
+    }
+    else{
+        texte.innerHTML="Plalolo ";
+        img.innerHTML='<img src="/JS/cat-space.gif" widht="20px" heigth="20px"></img>';
+        console.log("rear");
+    }
 }
 
 main();
