@@ -619,6 +619,10 @@ h7{
     color: red;
 }
 
+h7:hover{
+    cursor:pointer
+}
+
 /* plateforme technologique */
 .techno-flex{
     display :grid;
