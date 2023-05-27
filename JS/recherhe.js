@@ -17,8 +17,6 @@ function moovon(){
 
     var boo = document.getElementById("Bouh");
 
-    
-
     if(axe1.style.gridRowStart==2){
 
         boo.style.display="none";

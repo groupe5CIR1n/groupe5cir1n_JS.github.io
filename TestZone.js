@@ -18,6 +18,7 @@ function main(){
         let colo=["","#c32b72","#196ca3"];
         document.body.style.backgroundColor=colo[this.selectedIndex];
     })
+
 }
 
 
@@ -38,6 +39,5 @@ function song(){
     sonnerie.play();
     window.open("calling-page.html", "Calling", "width=250 height=250",);
 }
-
 
 main();
