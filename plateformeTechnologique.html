@@ -11,141 +11,132 @@
     <script src="JS/plateformeTechnologique.js" defer></script>
 </head>
     <body oncopy="copy()">
-        <div class="background"></div>
-        <!-- Header -->
-        <div id="header">
-            <div class="flex-header">
-                <div id="Timer-Position" class="flex-item" onclick="changeColor(this)"></div>
-                <div id="Clock-Position" class ="flex-item" onclick="changeColor(this)"></div>
+        <div id="mod">
+            <!-- Header -->
+            <div id="header">
+               <div class="flex-header">
+                  <div id="Timer-Position" class="flex-item" onclick="changeColor(this)"></div>
+                     <div id="Clock-Position" class ="flex-item" onclick="changeColor(this)"></div>
 
-                <div class="flex-item" onclick="getColor(this)"><a><span class="material-symbols-outlined">home</span> Accueil</a></div>
-                
-                <div class="dropdown" onclick="getColor(this)">
-                    <button class="flex-item-header_select" onclick="getColor(this)"><span class="material-symbols-outlined">search</span> Recherche</button>
-                    <div class="dropdown-content">
-                        <a onclick="getColor(this)">Thématiques de recherche</a>
-                        <a onclick="getColor(this)">Plateformes technologiques</a>
-                    </div>
-                </div>
+                  <div class="flex-item" onclick="getColor(this)"><a><span class="material-symbols-outlined">home</span> Accueil</a></div>
 
-                <div class="flex-item" onclick="getColor(this)"><a><span class="material-symbols-outlined">group</span> Membres</a></div>
-                
-                <div class="flex-item" onclick="getColor(this)"><a><span class="material-symbols-outlined">flight_takeoff</span> Projets</a></div>
-                
-                <div class="flex-item" onclick="getColor(this)"><a><span class="material-symbols-outlined">receipt_long</span> Publications</a></div>
-
-                <div class="flex-item" onclick="getColor(this)"><a><span class="material-symbols-outlined">groups</span> Partenaires</a></div>
-
-                <div class="dropdown" onclick="getColor(this)">
-                    <button class="flex-item" onclick="getColor(this)"><span class="material-symbols-outlined">contact_support</span> Infos & Contacts </button>
-                    <div class="dropdown-content">
-                        <a onclick="getColor(this)">Contactez-nous</a>
-                        <a onclick="getColor(this)">Plan d'accès</a>
-                        <a onclick="getColor(this)">Offres d'emploi</a>
-                    </div>
-                </div>
-                <a><img src="images/LabISEN.png" width="80px" height="auto"></a>
-            </div>
-        </div>
-
-        <!-- Content of the html. -->
-        <div id="mod" class="modal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <header class="container"> 
-                        <a href="#" class="closebtn">×</a>
-                        <!-- zone de titre -->
-                        <div id="TitlePlace"></div>
-                    </header>
-                </br>
-                    <div id="imagePos"><!-- zone de l'image --></div>
-                </br>
-                    <div class="container" id="container">
-                        <!-- zone de contenu -->
-                    </div>
-                </br>
-                </div>
-            </div>
-        </div>
-
-        <h1>Plateforme technologiques :<div class="mouvmentblock"></div></h1>
-        <div id="loaderZone"></div>
-        
-        <div id="content">
-            <p>
-                Les travaux de l'équipe débouchent souvent sur une preuve de concept, une réalisation de prototypes ou undéploiement de plateformes technologiques. Ces plateformes sont à la fois un outil interne pour mener desexpérimentations et aussi un moyen de communication vers nos partenaires.
-            </p>
-        </div>
-        
-        </br>
-        
-        <div class="techno-flex">
-            <div id="card-one">
-                <h4><a href="#mod" onclick="createModal('card-one')">Environnement Hybride connectés :</a></h4>
-                <p>
-                    Cette plateforme est en cours de développement et vise à offrirdes services à la personne dans des environnements indoor (bureau connecté, école connectée, usineconnectée, ...). Parmi les services, nous envisageons l’étude du comportement des personnes, ladétection d’anomalies et la sécurité de l’environnement. Deux enjeux majeurs sont traités : (1)l’application des algorithmes d’intelligence artificielle qui prend tout son sens pour la prédictiond’évènements à risque ; (2) la mise en place de moyens numériques interopérables comme unearchitecture réseau dédiée et des technologies d’acquisition et de communications standardspermettant l’accès aux données et la centralisation/distribution de la prise de décision.Pour cette plateforme nous disposons de moyens de calcul intensif comme le serveur GPU pour fairedu FoG computing qui présente une alternative intéressante par rapport au cloud pour des raisons desécurité de données et de coût.
-                </p>
-                <img id="image" src="images/Plateforme technologique/Environnement hybride connecté.jpg" title="environement hybride connecté" width="335" height="240" >
-            </div>
-            <div id="card-two">
-                <h4><a href="#mod" class="platfo" onclick="createModal('card-two')">Chambre connectée (living lab) :</a></h4>
-                <p>
-                    Le living Lab est le fruit de collaboration avec l’entreprise demutuelle santé Malakoff Médéric. Initialement, ce Living Lab avait pour but de détecter la chute despersonnes âgées sans utiliser de capteurs portés (bracelet, médaillon...). Une solution a été proposéeen utilisant un capteur de type Kinect permettant de garantir le respect de la vie privée et deconnaitre à chaque instant la position de la personne dans le studio. Afin d'étendre les possibilités dustudio, un ensemble de capteurs ont été ajoutés : prises connectées, capteurs d'environnements,température, lumière, humidité, gaz...), capteurs de consommation (électricité, eau), Caméras, microet haut parleurs.Plusieurs scénarios ont été mis en place pour utiliser les données des différents capteurs et envoyerune alarme (sms, mail) en cas de chute ou si la personne reste trop longtemps allongée sur le sol, encas de détection d'anomalie (pas suffisamment de consommation d'eau en fonction d'unetempérature trop élevée...). Ce démonstrateur permet également de visualiser les données desdifférents capteurs en temps réel et à distance, en se connectant sur un site web.Les travaux futurs en lien avec cette plateforme à développer de scénarios en conditions "réelles"dans des EPHAD par exemple pour contribuer dans la prise en charge des risques liés aux personnesen situation de dépendance (déshydratation, comportement, chutes...)
-                </p>
-                <img id="image" class="platfo" src="images/Plateforme technologique/visite-virtuelle-1024x485.jpg" title="chambre connectée" width="280" height="180">
-            </div>
-        </div>
-
-        </br>        
-
-        <!-- Footer -->
-        <footer>
-            <div class="degrade-horizontal">
-                <div class="grid-container-footer">
-                    <div class="grid-item-footer">Brest</div>
-                    <div class="grid-item-footer"><span class="material-symbols-outlined">phone</span>02 98 03 84 00</div>
-                    <div class="grid-item-footer">
-                        <a href="https://www.google.com/maps/place/ISEN+Yncr%C3%A9a+Ouest+-+Site+de+Brest/@48.4071086,-4.497691,17z/data=!4m13!1m7!3m6!1s0x4816bbf23a479b5d:0x47ea95a2d8a60459!2s20+Rue+Cuirass%C3%A9+Bretagne,+29200+Brest!3b1!8m2!3d48.4071051!4d-4.4955023!3m4!1s0x4816bbf230f791a7:0xc5ac9be0d1314c13!8m2!3d48.4070554!4d-4.495554" target="blank" title="maps">
-                        <span class="material-symbols-outlined">map</span>20 rue Cuirassé Bretagne 29200 BREST</a>
-                    </div>
-                    <div class="grid-item-footer">Caen</div>
-                    <div class="grid-item-footer"><span class="material-symbols-outlined">phone</span>02 30 31 03 20</div>
-                    <div class="grid-item-footer">
-                        <a href="https://www.google.com/maps/place/ISEN+Caen/@49.1891099,-0.3622724,16z/data=!4m10!1m2!2m1!1sISEN+caen!3m6!1s0x480a43ea847e5455:0xe897028f3efb58c7!8m2!3d49.1891099!4d-0.3557325!15sCglJU0VOIGNhZW6SAQdjb2xsZWdl4AEA!16s%2Fg%2F11kkq3vt_k" title="maps" target="blank">
-                        <span class="material-symbols-outlined">map</span>8 Av. Croix Guérin, 14000 Caen</a>
+                  <div class="dropdown" onclick="getColor(this)">
+                       <button class="flex-item-header_select" onclick="getColor(this)"><span class="material-symbols-outlined">search</span> Recherche</button>
+                       <div class="dropdown-content">
+                           <a onclick="getColor(this)">Thématiques de recherche</a>
+                            <a onclick="getColor(this)">Plateformes technologiques</a>
+                       </div>
                     </div>
 
-                    <div class="grid-item-footer">Nantes</div>
-                    <div class="grid-item-footer"><span class="material-symbols-outlined">phone</span>02 30 13 05 60</div>
-                    <div class="grid-item-footer">
-                        <a href="https://www.google.com/maps/place/Av.+du+Champ+de+Man%C5%93uvre/@47.274036,-1.504159,17z/data=!4m5!3m4!1s0x4805efdcb8829049:0xe63f56c4c1b10182!8m2!3d47.274036!4d-1.504159" title="maps" target="_blank">
-                        <span class="material-symbols-outlined">map</span>33 Avenue du champ de Manoeuvre, 44470 Carquefou</a>
-                    </div>
-                    <div class="grid-item-footer">Rennes</div>
-                    <div class="grid-item-footer"><span class="material-symbols-outlined">phone</span>02 99 33 04 36</div>
-                    <div class="grid-item-footer">
-                        <a href="https://www.google.com/maps/place/ISEN+Rennes/@48.1202921,-1.6344731,16z/data=!4m10!1m2!2m1!1sISEN+frennes!3m6!1s0x480edec3102dbff9:0x5720e941d4b9e724!8m2!3d48.1202921!4d-1.6286467!15sCgxJU0VOIGZyZW5uZXOSAQ9ncmFkdWF0ZV9zY2hvb2zgAQA!16s%2Fg%2F11b6dpvwtg" title="maps" target="blank">
-                        <span class="material-symbols-outlined">map</span>2 Rue de la Châtaigneraie, 35510 Cesson-Sévigné</a>
-                    </div>
-                    <div id="EVAN">
-                        <div id="linkname">
-                            <a href="https://www.linkedin.com/in/evan-bourgeois-691304261/" title="Linkedin de Evan Bourgeois" target="blank">Evan Bourgeois</a>
-                        </div>
-                        <div id="linklogo">
-                            <a href="https://www.linkedin.com/in/evan-bourgeois-691304261/" title="Linkedin de Evan Bourgeois" target="blank"><img src="images/LinkedIn.png" alt="logo linkedin" width="15" height="15"></a>
+                   <div class="flex-item" onclick="getColor(this)"><a><span class="material-symbols-outlined">group</span> Membres</a></div>
+
+                 <div class="flex-item" onclick="getColor(this)"><a><span class="material-symbols-outlined">flight_takeoff</span> Projets</a></div>
+
+                    <div class="flex-item" onclick="getColor(this)"><a><span class="material-symbols-outlined">receipt_long</span> Publications</a></div>
+
+                    <div class="flex-item" onclick="getColor(this)"><a><span class="material-symbols-outlined">groups</span> Partenaires</a></div>
+
+                    <div class="dropdown" onclick="getColor(this)">
+                        <button class="flex-item" onclick="getColor(this)"><span class="material-symbols-outlined">contact_support</span> Infos & Contacts </button>
+                        <div class="dropdown-content">
+                            <a onclick="getColor(this)">Contactez-nous</a>
+                            <a onclick="getColor(this)">Plan d'accès</a>
+                            <a onclick="getColor(this)">Offres d'emploi</a>
                         </div>
                     </div>
+                    <a><img src="images/LabISEN.png" width="80px" height="auto"></a>
+                </div>
+            </div>
+            <a href="TestZone.html">LOL</a>
+            <!-- Content of the html. -->
+                <h1>Plateforme technologiques :<div class="mouvmentblock"></div></h1>
+
+                <div id="loaderZone"></div>
+
+                <div id="content">
+                    <p>
+                       Les travaux de l'équipe débouchent souvent sur une preuve de concept, une réalisation de prototypes ou undéploiement de plateformes technologiques. Ces plateformes sont à la fois un outil interne pour mener desexpérimentations et aussi un moyen de communication vers nos partenaires.
+                   </p>
+               </div>
+            
+         </br>
+            <div class="techno-flex">
+               <div id="card-one">
+                   <h4><span id="cardo" onclick="createModal('card-one')"><a href="#open">Environnement Hybride connectés :</a></h4>
+                  <p>
+                       Cette plateforme est en cours de développement et vise à offrirdes services à la personne dans des environnements indoor (bureau connecté, école connectée, usineconnectée, ...). Parmi les services, nous envisageons l’étude du comportement des personnes, ladétection d’anomalies et la sécurité de l’environnement. Deux enjeux majeurs sont traités : (1)l’application des algorithmes d’intelligence artificielle qui prend tout son sens pour la prédictiond’évènements à risque ; (2) la mise en place de moyens numériques interopérables comme unearchitecture réseau dédiée et des technologies d’acquisition et de communications standardspermettant l’accès aux données et la centralisation/distribution de la prise de décision.Pour cette plateforme nous disposons de moyens de calcul intensif comme le serveur GPU pour fairedu FoG computing qui présente une alternative intéressante par rapport au cloud pour des raisons desécurité de données et de coût.
+                 </p>
+                    <img id="image" src="images/Plateforme technologique/Environnement hybride connecté.jpg" title="environement hybride connecté" width="335" height="240" >
+              </div>
+              <div id="card-two">
+                    <h4><span id="cardo" onclick="createModal('card-two')"><a href="#open">Chambre connectée (living lab) :</a></h4>
+                   <p>
+                       Le living Lab est le fruit de collaboration avec l’entreprise demutuelle santé Malakoff Médéric. Initialement, ce Living Lab avait pour but de détecter la chute despersonnes âgées sans utiliser de capteurs portés (bracelet, médaillon...). Une solution a été proposéeen utilisant un capteur de type Kinect permettant de garantir le respect de la vie privée et deconnaitre à chaque instant la position de la personne dans le studio. Afin d'étendre les possibilités dustudio, un ensemble de capteurs ont été ajoutés : prises connectées, capteurs d'environnements,température, lumière, humidité, gaz...), capteurs de consommation (électricité, eau), Caméras, microet haut parleurs.Plusieurs scénarios ont été mis en place pour utiliser les données des différents capteurs et envoyerune alarme (sms, mail) en cas de chute ou si la personne reste trop longtemps allongée sur le sol, encas de détection d'anomalie (pas suffisamment de consommation d'eau en fonction d'unetempérature trop élevée...). Ce démonstrateur permet également de visualiser les données desdifférents capteurs en temps réel et à distance, en se connectant sur un site web.Les travaux futurs en lien avec cette plateforme à développer de scénarios en conditions "réelles"dans des EPHAD par exemple pour contribuer dans la prise en charge des risques liés aux personnesen situation de dépendance (déshydratation, comportement, chutes...)
+                   </p>
+                 <img id="image" class="platfo" src="images/Plateforme technologique/visite-virtuelle-1024x485.jpg" title="chambre connectée" width="280" height="180">
+
+            </div>
+            </div>
+            </br> 
+            <div id="open" class="modalBox">
+                <div id="modalContent">
+                    <p><a class="close" title="Fermer" href="#close">X</a></p>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>      
+
+            <!-- Footer -->
+            <footer>
+             <div class="degrade-horizontal">
+                 <div class="grid-container-footer">
+                      <div class="grid-item-footer">Brest</div>
+                      <div class="grid-item-footer"><span class="material-symbols-outlined">phone</span>02 98 03 84 00</div>
+                      <div class="grid-item-footer">
+                         <a href="https://www.google.com/maps/place/ISEN+Yncr%C3%A9a+Ouest+-+Site+de+Brest/@48.4071086,-4.497691,17z/data=!4m13!1m7!3m6!1s0x4816bbf23a479b5d:0x47ea95a2d8a60459!2s20+Rue+Cuirass%C3%A9+Bretagne,+29200+Brest!3b1!8m2!3d48.4071051!4d-4.4955023!3m4!1s0x4816bbf230f791a7:0xc5ac9be0d1314c13!8m2!3d48.4070554!4d-4.495554" target="blank" title="maps">
+                         <span class="material-symbols-outlined">map</span>20 rue Cuirassé Bretagne 29200 BREST</a>
+                     </div>
+                        <div class="grid-item-footer">Caen</div>
+                     <div class="grid-item-footer"><span class="material-symbols-outlined">phone</span>02 30 31 03 20</div>
+                     <div class="grid-item-footer">
+                            <a href="https://www.google.com/maps/place/ISEN+Caen/@49.1891099,-0.3622724,16z/data=!4m10!1m2!2m1!1sISEN+caen!3m6!1s0x480a43ea847e5455:0xe897028f3efb58c7!8m2!3d49.1891099!4d-0.3557325!15sCglJU0VOIGNhZW6SAQdjb2xsZWdl4AEA!16s%2Fg%2F11kkq3vt_k" title="maps" target="blank">
+                            <span class="material-symbols-outlined">map</span>8 Av. Croix Guérin, 14000 Caen</a>
+                        </div>
+
+                     <div class="grid-item-footer">Nantes</div>
+                        <div class="grid-item-footer"><span class="material-symbols-outlined">phone</span>02 30 13 05 60</div>
+                        <div class="grid-item-footer">
+                         <a href="https://www.google.com/maps/place/Av.+du+Champ+de+Man%C5%93uvre/@47.274036,-1.504159,17z/data=!4m5!3m4!1s0x4805efdcb8829049:0xe63f56c4c1b10182!8m2!3d47.274036!4d-1.504159" title="maps" target="_blank">
+                            <span class="material-symbols-outlined">map</span>33 Avenue du champ de Manoeuvre, 44470 Carquefou</a>
+                        </div>
+                     <div class="grid-item-footer">Rennes</div>
+                        <div class="grid-item-footer"><span class="material-symbols-outlined">phone</span>02 99 33 04 36</div>
+                        <div class="grid-item-footer">
+                            <a href="https://www.google.com/maps/place/ISEN+Rennes/@48.1202921,-1.6344731,16z/data=!4m10!1m2!2m1!1sISEN+frennes!3m6!1s0x480edec3102dbff9:0x5720e941d4b9e724!8m2!3d48.1202921!4d-1.6286467!15sCgxJU0VOIGZyZW5uZXOSAQ9ncmFkdWF0ZV9zY2hvb2zgAQA!16s%2Fg%2F11b6dpvwtg" title="maps" target="blank">
+                            <span class="material-symbols-outlined">map</span>2 Rue de la Châtaigneraie, 35510 Cesson-Sévigné</a>
+                        </div>
+                        <div id="EVAN">
+                            <div id="linkname">
+                                <a href="https://www.linkedin.com/in/evan-bourgeois-691304261/" title="Linkedin de Evan Bourgeois" target="blank">Evan Bourgeois</a>
+                            </div>
+                            <div id="linklogo">
+                                <a href="https://www.linkedin.com/in/evan-bourgeois-691304261/" title="Linkedin de Evan Bourgeois" target="blank"><img src="images/LinkedIn.png" alt="logo linkedin" width="15" height="15"></a>
+                         </div>
+                        </div>
     
-                    <div class="flex-item-footer" id="JULIEN">
-                        <div id="linkname">
-                            <a href="https://www.linkedin.com/in/julien-maret-833346261/" title="Linkedin de Julien Maret" target="blank">Julien Maret</a>
-                        </div>
-                        <div id="linklogo">
-                            <a href="https://www.linkedin.com/in/julien-maret-833346261/" title="linkedin de Julien Maret" target="blank"><img src="images/LinkedIn.png" alt="logo linkedin" width="15" height="15"></a>
+                        <div class="flex-item-footer" id="JULIEN">
+                            <div id="linkname">
+                                <a href="https://www.linkedin.com/in/julien-maret-833346261/" title="Linkedin de Julien Maret" target="blank">Julien Maret</a>
+                                </div>
+                            <div id="linklogo">
+                                <a href="https://www.linkedin.com/in/julien-maret-833346261/" title="linkedin de Julien Maret" target="blank"><img src="images/LinkedIn.png" alt="logo linkedin" width="15" height="15"></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+            
+            </footer>
+        </div>
     </body>
 </html>
