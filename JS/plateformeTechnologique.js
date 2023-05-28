@@ -8,5 +8,7 @@ function createModal(card){
     title.innerHTML=pos.children[0].outerHTML;
     texte.innerHTML=pos.children[1].outerHTML;
     img.innerHTML=pos.children[2].outerHTML;
+
+    
     
 }
