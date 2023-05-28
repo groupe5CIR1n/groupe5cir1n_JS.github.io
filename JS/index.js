@@ -1,5 +1,5 @@
 function main(){
-  let vitesse = 25;
+  let vitesse = 500;
   slowiAppear(vitesse);
 }
 
