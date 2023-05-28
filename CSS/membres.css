@@ -125,3 +125,18 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+#cube{
+    grid-column: 0 / 1;
+    position:absolute;
+    border-color: red;
+    /* background-image:url(/JS/pride-rainbow.gif); */
+    background-color: #555;
+    /* opacity:0.7; */
+    width  : 15px;
+    height : 15px;
+}
+
+#ayoub {
+    align-self: center;
+}

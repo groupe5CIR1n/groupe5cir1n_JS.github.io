@@ -13,38 +13,37 @@
         <div class="background"></div>
         <!-- Header -->
         <div id="header">
-
             <div class="flex-header">
-                <div id="Timer-Position" class="flex-item"></div>
-                <div id="Clock-Position" class ="flex-item"></div>
+                <div id="Timer-Position" class="flex-item" onclick="changeColor(this)"></div>
+                <div id="Clock-Position" class ="flex-item" onclick="changeColor(this)"></div>
 
-                <div class="flex-item"><a><span class="material-symbols-outlined">home</span> Accueil</a></div>
+                <div class="flex-item" onclick="getColor(this)"><a><span class="material-symbols-outlined">home</span> Accueil</a></div>
                 
-                <div class="dropdown">
-                    <button class="flex-item"><span class="material-symbols-outlined">search</span> Recherche</button>
+                <div class="dropdown" onclick="getColor(this)">
+                    <button class="flex-item" onclick="getColor(this)"><span class="material-symbols-outlined">search</span> Recherche</button>
                     <div class="dropdown-content">
-                        <a>Thématiques de recherche</a>
-                        <a>Plateformes technologiques</a>
+                        <a onclick="getColor(this)">Thématiques de recherche</a>
+                        <a onclick="getColor(this)">Plateformes technologiques</a>
                     </div>
                 </div>
 
-                <div class="flex-item"><a><span class="material-symbols-outlined">group</span> Membres</a></div>
+                <div class="flex-item" onclick="getColor(this)"><a><span class="material-symbols-outlined">group</span> Membres</a></div>
                 
-                <div class="flex-item"><a><span class="material-symbols-outlined">flight_takeoff</span> Projets</a></div>
+                <div class="flex-item" onclick="getColor(this)"><a><span class="material-symbols-outlined">flight_takeoff</span> Projets</a></div>
                 
-                <div class="flex-item"><a><span class="material-symbols-outlined">receipt_long</span> Publications</a></div>
+                <div class="flex-item" onclick="getColor(this)"><a><span class="material-symbols-outlined">receipt_long</span> Publications</a></div>
 
-                <div class="flex-item"><a><span class="material-symbols-outlined">groups</span> Partenaires</a></div>
+                <div class="flex-item" onclick="getColor(this)"><a><span class="material-symbols-outlined">groups</span> Partenaires</a></div>
 
-                <div class="dropdown">
-                    <button class="flex-item-header_select"><span class="material-symbols-outlined">contact_support</span> Infos & Contacts </button>
+                <div class="dropdown" onclick="getColor(this)">
+                    <button class="flex-item-header_select" onclick="getColor(this)"><span class="material-symbols-outlined">contact_support</span> Infos & Contacts </button>
                     <div class="dropdown-content">
-                        <a>Contactez-nous</a>
-                        <a>Plan d'accès</a>
-                        <a>Offres d'emploi</a>
+                        <a onclick="getColor(this)">Contactez-nous</a>
+                        <a onclick="getColor(this)">Plan d'accès</a>
+                        <a onclick="getColor(this)">Offres d'emploi</a>
                     </div>
                 </div>
-                <a href="https://isen-nantes.fr/"><img src="images/LabISEN.png" width="80px" height="auto"></a>
+                <a><img src="images/LabISEN.png" width="80px" height="auto"></a>
             </div>
         </div>
         <!-- Content of the html. -->

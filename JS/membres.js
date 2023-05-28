@@ -176,6 +176,7 @@ function main() {
 }
 
 function cubeFear(pos){
+    pos.remove();
     pos.style.display='none';
 }
 
