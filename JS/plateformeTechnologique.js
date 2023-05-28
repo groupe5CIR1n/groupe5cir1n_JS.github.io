@@ -1,14 +1,24 @@
-function createModal(card){
-    var title = document.getElementById("TitlePlace");
-    var texte = document.getElementById("container");
-    var img = document.getElementById("imagePos");
-
-    var pos = document.getElementById(card);
-    // console.log(pos.children);
-    title.innerHTML=pos.children[0].outerHTML;
-    texte.innerHTML=pos.children[1].outerHTML;
-    img.innerHTML=pos.children[2].outerHTML;
-
-    
-    
+function main(){
+    //on ferme la fenêtre modale si c'est ouvert #on counter le refresh
+    var modale = document.getElementById("open");
+    modale.style.display="none";
 }
+
+function createModal(card){
+    var modale = document.getElementById("open");
+    modale.style.display="block";
+
+    //on récupère les éléments à indenter dans la modale
+    var TitleCon = document.getElementById(card).children[0];
+    var ImgCon = document.getElementById(card).children[1];
+    var TextCon = document.getElementById(card).children[2];
+
+    //on réindente dans la zone modale;
+    var modalCOnt = document.getElementById("modalContent");
+    modalCOnt.children[1].innerHTML=TitleCon.outerHTML;
+    modalCOnt.children[3].innerHTML=ImgCon.outerHTML;
+    modalCOnt.children[2].innerHTML=TextCon.outerHTML;
+
+}
+
+main();

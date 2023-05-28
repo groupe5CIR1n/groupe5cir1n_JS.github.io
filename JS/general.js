@@ -146,6 +146,7 @@ function copy() {
 function copyNum(pos){
     // We show a prompt asking for the user to input something...
     var confirm = prompt("Eh lol, tu veux appeler se n° ?? Ben tu fait pas Ctrl+c, Ctrl+v dans ton tél espèce de geux ! tu le recopie là a la main (comme qq de goût) et tu valide !");
+    num = pos.innerText.replace(/ /g,'');
     if(confirm==num){
         console.log("on appelle le n°",confirm)
         console.log("ptn il sait copier des trucs HHAAAA");

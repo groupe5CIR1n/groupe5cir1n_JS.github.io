@@ -14,15 +14,18 @@ function toTheTop() {
     document.documentElement.scrollTop = 0;
 }
 
-function changeImage(article){
-  var pos = document.getElementsByTagName("img")[article];
-  console.log("VITE !! faut changer d'image sinon on vas penser que notre site est pas fini T w T");
-  if(pos.src=="http://127.0.0.1:5500/images/projets/transformationDigitale.png" || pos.src=="http://127.0.0.1:5500/images/projets/droneSousMarins.png" || pos.src=="http://127.0.0.1:5500/images/projets/phoques.png" || pos.src=="http://127.0.0.1:5500/images/projets/architectureElectronique.png"){
-    let resu = pos.src.slice(0, pos.src.length - 4);
-    pos.src = resu+"2"+".png";
+function changeImage(article,imaged){
+  var pos = document.getElementsByTagName("img")[article];//on récupère la zone ou l'image vas être posée
+  
+  if(pos.className!="n2"){ //on vérifie que l'image n'as pas la class signifiant que l'on à changé
+    let resu = imaged.slice(0, imaged.length - 4); // on retire la fin (le ".png")
+    resu = resu+"2"+".png";//on rajoute un 2
+    pos.src = resu; //on réattribue la source de l'image a notre nvl image
+    pos.setAttribute("class","n2"); //on rajoute une class pour quand on recliqueras dessus
+
   }
   else{
-    let resu = pos.src.slice(0, pos.src.length - 5);
-    pos.src = resu+".png";
+    pos.src = resu; //on attribut simplement la src que l'on connais (pour l'image de base)
+    pos.removeAttribute("class");
   }
 }

@@ -56,4 +56,19 @@ function addInModal(link){
     }
 }
 
+function ModalPear(pos){
+    //éléments a ajouter
+    var titre = document.createElement("h2");
+    titre.innerHTML='TOITRE';
+
+    var image=document.getElementById("img");
+
+    var texte = document.getElementById("modActivator");
+
+    //on récupère la position de notre fenêtre modale
+    var modalZone = document.getElementById("modalZone");
+
+    
+}
+
 main();
