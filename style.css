@@ -928,13 +928,6 @@ a.closebtn{
     line-height: 100px;
   }
   
-  img{
-    transition: transform .9s;
-  }
-  
-  img:hover{
-    transform: scale(1.2); /* Équivalent à scaleX(2) scaleY(0.5) */
-  }
   
   body {
     -webkit-transition: background-color 2s ease-out;
@@ -1011,4 +1004,35 @@ td
 {
 text-align :center;
 }
+
+fieldset{
+    text-align: justify;
+}
+
+#cache{
+    grid-template-columns: repeat(42,10px);
+    grid-template-rows: repeat(20,10px);
+
+    display:grid;
+    position: relative;
+}
+
+#cube{
+    grid-column: 0 / 1;
+    position:absolute;
+    border-color: red;
+    background-image:url(/JS/pride-rainbow.gif);
+    /* background-color: #555;
+    opacity:0.7; */
+    width  : 15px;
+    height : 15px;
+}
+
+
+#ayoub:hover{
+    border-color:red;
+    vertical-align: middle;
+}
+
+
   

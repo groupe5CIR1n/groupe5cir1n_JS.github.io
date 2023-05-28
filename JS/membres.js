@@ -153,6 +153,30 @@ function main() {
         button.innerHTML = "Retourner en vue du bas peuple";
         buttonAdd.style.visibility = "visible";
     }
+
+    var bigCache = document.getElementById("cache");
+    
+    for(let j=0;j<20;j++){
+
+        for(let i=0;i<42;i++){
+            var allreadyther = bigCache.innerHTML;
+            var newCache = document.createElement('div');
+            newCache.setAttribute("id","cube");
+            newCache.setAttribute("onmouseover","cubeFear(this)");
+    
+            newCache.style.gridColumn=i+'/'+(i+1);
+            newCache.style.gridRow = j+'/'+(j+1);
+            bigCache.innerHTML=allreadyther+newCache.outerHTML;
+        }
+    }
+    
+    var allreadyther = bigCache.innerHTML;
+    bigCache.innerHTML= allreadyther+'</div><img id="ayoub" class="membre" src="images/membres/Ayoub-Karine.png">'
+    console.log(bigCache.childNodes);
+}
+
+function cubeFear(pos){
+    pos.style.display='none';
 }
 
 main();

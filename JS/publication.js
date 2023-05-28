@@ -3,63 +3,36 @@ function main(){
 
     var year = document.querySelector('#selectedYear');
     var colo = document.querySelector('#selectedColor');
+    var aut = document.getElementById("allNAME");
+    var art = document.getElementById("allART");
 
-    year.addEventListener('change',function (){
-        let Year=["","#2022","#2023"];
-        if(this.selectedIndex==1){
-            var unset = document.getElementsByClassName("2023");
-            for(let i =0; i<unset.length;i++){
-                unset[i].style.display="none";
-            }
-        }
-        else{
-            var unset = document.getElementsByClassName("2023");
-            for(let i =0; i<unset.length;i++){
-                unset[i].style.display="block";
-            }
-        }
-        if(this.selectedIndex==2){
-            var unset = document.getElementsByClassName("2022");
-            for(let i =0; i<unset.length;i++){
-                unset[i].style.display="none";
-            }
-        }
-        else{
-            var unset = document.getElementsByClassName("2022");
-            for(let i =0; i<unset.length;i++){
-                unset[i].style.display="block";
-            }
-        }
-    })
+    var butaut = document.getElementById("validAutors");
+    var butart = document.getElementById("validArt");
+    console.log(aut);
+    console.log(art);
 
-    
-    colo.addEventListener('change', function () {
-        let colo=["","#c32b72","#196ca3"];
-        if(this.selectedIndex==1){
-            var unset = document.getElementsByClassName(colo[this.selectedIndex]);
-            for(let i =0; i<unset.length;i++){
-                unset[i].style.display="none";
+    butaut.addEventListener('click',function (){
+        console.log("testbuaut");
+        for(let i=0;i<aut.children.length;i++){
+            if(aut.children[i].checked){
+
+            }
+            else{
+
             }
         }
-        else{
-            var unset = document.getElementsByClassName("196ca3");
-            for(let i =0; i<unset.length;i++){
-                unset[i].style.display="block";
+    });
+
+    butart.addEventListener('click',function (){
+        console.log("testbuart");
+        for(let i=0;i<art.children.length;i++){
+            if(art.children[i].checked){
+
+            }
+            else{
+
             }
         }
-        if(this.selectedIndex==2){
-            var unset = document.getElementsByClassName("c32b72");
-            for(let i =0; i<unset.length;i++){
-                unset[i].style.display="none";
-            }
-        }
-        else{
-            var unset = document.getElementsByClassName("c32b72");
-            for(let i =0; i<unset.length;i++){
-                unset[i].style.display="block";
-            }
-        }
-        document.body.style.backgroundColor=colo[this.selectedIndex];
     });
 
 }
