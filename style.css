@@ -944,6 +944,16 @@ fieldset{
     position: relative;
 }
 
+#ayoub{
+    vertical-align: middle;
+    text-align: center;
+    margin:auto;
+}
+
+#pat{
+    justify-content: center;
+}
+
 #ayoub:hover{
     border-color:red;
     vertical-align: middle;
@@ -1047,4 +1057,5 @@ textarea.publi{
     font-size:16px;
     /* margin:4px 2px; */
     cursor:pointer;
-  }  
+  } 
+  

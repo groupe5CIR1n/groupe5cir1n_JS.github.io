@@ -1,10 +1,10 @@
 function main(){
+    //on ferme la fenêtre modale si c'est ouvert #on counter le refresh
     var modale = document.getElementById("open");
     modale.style.display="none";
 }
 
 function createModal(card){
-
     var modale = document.getElementById("open");
     modale.style.display="block";
 
@@ -13,7 +13,7 @@ function createModal(card){
     var ImgCon = document.getElementById(card).children[1];
     var TextCon = document.getElementById(card).children[2];
 
-    //on récupère la zone modale
+    //on réindente dans la zone modale;
     var modalCOnt = document.getElementById("modalContent");
     modalCOnt.children[1].innerHTML=TitleCon.outerHTML;
     modalCOnt.children[3].innerHTML=ImgCon.outerHTML;

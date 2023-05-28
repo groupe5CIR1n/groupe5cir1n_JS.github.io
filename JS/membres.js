@@ -154,25 +154,23 @@ function main() {
         buttonAdd.style.visibility = "visible";
     }
 
+    //on récupère l'élément qui entoure ce que l'ont veut cacher 
     var bigCache = document.getElementById("cache");
     
-    for(let j=0;j<20;j++){
+    for(let j=0;j<20;j++){ //on boucle le nb lignes
 
-        for(let i=0;i<42;i++){
-            var allreadyther = bigCache.innerHTML;
-            var newCache = document.createElement('div');
+        for(let i=0;i<42;i++){ //on boucle le nb de colonnes
+
+            var allreadyther = bigCache.innerHTML;//on conserve ce que contient déjà le cache (pour ne pas supprimer les cubes déjà fait)
+            var newCache = document.createElement('div');//on crée un nvl élément cube
             newCache.setAttribute("id","cube");
             newCache.setAttribute("onmouseover","cubeFear(this)");
     
-            newCache.style.gridColumn=i+'/'+(i+1);
+            newCache.style.gridColumn=i+'/'+(i+1);//on rajoute le cube a la position grid qui convient 
             newCache.style.gridRow = j+'/'+(j+1);
-            bigCache.innerHTML=allreadyther+newCache.outerHTML;
+            bigCache.innerHTML=allreadyther+newCache.outerHTML;//on l'ajoute à l'ensemble des caches 
         }
     }
-    
-    var allreadyther = bigCache.innerHTML;
-    bigCache.innerHTML= allreadyther+'</div><img id="ayoub" class="membre" src="images/membres/Ayoub-Karine.png">'
-    console.log(bigCache.childNodes);
 }
 
 function cubeFear(pos){
