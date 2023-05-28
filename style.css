@@ -887,11 +887,11 @@ div.degrade-horizontal {
     background-color: red;
 }
 
-img#imgZoom{
+img#img-zoom{
     transition: transform 9.s;
   }
   
-img#imgZoom:hover{
+img#img-zoom:hover{
     transform-origin: left;
 }
 
