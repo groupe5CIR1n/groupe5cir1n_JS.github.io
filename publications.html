@@ -58,53 +58,37 @@
             <table class="table table-bordered border-primary" id="table1">
                 <thead>
                   <tr>
-                    <th scope="col">Couleur</th>
-                    <th scope="col">Dates</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Couleurs</th>
+                    <th scope="cole">Auteurs</th>
+                    <th scope="cole">Articles</th>           
                   </tr>
                 </thead>
                 <tbody>
                     <td>
-                        <select id="selectedYear" class="form-select" aria-label="Default select example">
-                            <option selected>Sélectionnez Année</option>
-                            <option value="1">2022</option>
-                            <option value="2">2023</option>
+                        <input id="date" type="date" onkeyup="modifDate()">
+                    </td>
+                    <td>
+                        <select id="selectedColor" class="form-select" aria-label="Default select example" onchange="modifColo()">
+                            <option selected>Tous</option>
+                            <option style="background-color: #c32b72">Revues </option>
+                            <option style="background-color: #196ca3">Conférences</option>
                         </select>
                     </td>
                     <td>
-                        <select id="selectedColor" class="form-select" aria-label="Default select example">
-                            <option selected>Sélectionnez type de marqueur</option>
-                            <option value="1" style="background-color: #c32b72">Revues </option>
-                            <option value="2" style="background-color: #196ca3">Conférences</option>
-                        </select>
+                        <textarea id="aut" class="publi" onkeyup="addAut()"></textarea>                       
                     </td>
-                </tr>
+                    <td>
+                        <textarea id="art" class="publi"onkeyup="addArt()"></textarea>                       
+                    </td>
                 </tbody>
             </table>
-            <table class="table table-bordered border-primary" id="table2">
-                <thead>
-                    
-                        <th scope="cole">Auteurs</th>
-     
-                        <th scope="cole">Articles</th>
-        
-                </thead>
+            <!-- <button type="submit">Submit</button> -->
+            <div id="selec">
                 
-                <tbody>
-                    <td>
-                        <fieldset>
-                            <textarea></textarea>                       
-                        </fieldset>
-                    </td>
-                    <td>
-                        <fieldset> 
-                            <textarea></textarea>                       
-                        </fieldset>
-                    </td>
-                </tbody>
-            </thead>
-            </table>
+            </div>
             <div id="place-for-article">
-                <div class="flex-uncenter c32b72  2023">
+                <div class="flex-uncenter Revues">
                     <p>
                         <span id="carre-revue"></span>
                         Sébastien Puma, Emmanuel Sander, Matthieu Saumard, Isabelle Barbet, Aurélien Latouche:
@@ -113,7 +97,7 @@
                     </p>
                 </div>
                 
-                <div class="flex-uncenter 196ca3 2022">
+                <div class="flex-uncenter Conférences">
                     <p class="">
                         <span id="carre-congres"></span>
                         Ayoub Karine, Thibault Napoléon, Maher Jridi.
@@ -122,7 +106,7 @@
                     </p>
                 </div>
     
-                <div class="flex-uncenter 196ca3 2022">
+                <div class="flex-uncenter Conférences">
                     <p>
                         <span id="carre-congres"></span>
                         Salima Bourbia, Ayoub Karine, Aladine Chetouani, Mohammed El Hassouni, Maher Jridi.
@@ -131,7 +115,7 @@
                     </p>
                 </div>
     
-                <div class="flex-uncenter c32b72 2022">
+                <div class="flex-uncenter Revues">
                     <p>
                         <span id="carre-revue"></span>
                         Ayoub Karine, Maher Jridi, Rémi Adde, Sébastien Demousselle.
@@ -140,7 +124,7 @@
                     </p>
                 </div>
     
-                <div class="flex-uncenter c32b72 2022">
+                <div class="flex-uncenter Revues">
                     <p>
                         <span id="carre-revue"></span>
                         Sylvain Lefebvre, Maher Jridi.
