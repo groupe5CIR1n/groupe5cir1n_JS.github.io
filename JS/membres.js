@@ -157,14 +157,17 @@ function main() {
     //on récupère l'élément qui entoure ce que l'ont veut cacher 
     var bigCache = document.getElementById("cache");
     
-    for(let j=0;j<20;j++){ //on boucle le nb lignes
+    for(let j=0;j<22;j++){ //on boucle le nb lignes
 
-        for(let i=0;i<42;i++){ //on boucle le nb de colonnes
+        for(let i=0;i<21;i++){ //on boucle le nb de colonnes
 
             var allreadyther = bigCache.innerHTML;//on conserve ce que contient déjà le cache (pour ne pas supprimer les cubes déjà fait)
             var newCache = document.createElement('div');//on crée un nvl élément cube
             newCache.setAttribute("id","cube");
             newCache.setAttribute("onmouseover","cubeFear(this)");
+
+
+            newCache.style.backgroundColor='#'+(Math.random()*0xFFFFFF<<0).toString(16);
     
             newCache.style.gridColumn=i+'/'+(i+1);//on rajoute le cube a la position grid qui convient 
             newCache.style.gridRow = j+'/'+(j+1);
