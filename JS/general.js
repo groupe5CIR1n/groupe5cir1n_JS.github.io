@@ -149,7 +149,7 @@ function copyNum(pos){
     if(confirm==num){
         console.log("on appelle le n°",confirm)
         console.log("ptn il sait copier des trucs HHAAAA");
-        let sonnerie = new Audio("/JS/Sonnerie.mp3");
+        let sonnerie = new Audio("gif_and_mp3/Sonnerie.mp3");
         sonnerie.play();
         window.open("calling-page.html", "Calling", "width=250 height=250",); // And show a new web page that shows a phone ringing
     }

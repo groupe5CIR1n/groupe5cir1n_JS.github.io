@@ -2,7 +2,7 @@ function main(){
     var title = document.getElementsByTagName("h7")[0];
 
     var bouh=document.getElementById("Bouh");
-    bouh.innerHTML="<img src='/JS/derpi.gif' id='derp' width='500px' height='500px'>";
+    bouh.innerHTML="<img src='images/derpi.gif' id='derp' width='500px' height='500px'>";
     bouh.style.display="none";
 
     title.addEventListener("click",()=>moovon());
