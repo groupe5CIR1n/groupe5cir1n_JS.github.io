@@ -1,8 +1,8 @@
 function main(){
     var title = document.getElementsByTagName("h7")[0];
 
-    var bouh=document.getElementById("Bouh");
-    bouh.innerHTML="<img src='images/derpi.gif' id='derp' width='500px' height='500px'>";
+    var bouh=document.getElementById("Bouh"); // AAAAAAAAAAAH! (sorry, the name of the variable is really scary)
+    bouh.innerHTML="<img src='images/derpi.gif' id='derp' width='500px' height='500px'>"; // Just a small easter egg. (:
     bouh.style.display="none";
 
     title.addEventListener("click",()=>moovon());
