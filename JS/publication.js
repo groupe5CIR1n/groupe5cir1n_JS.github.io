@@ -9,7 +9,6 @@ function modifDate(){ //permet de capter la modification de la date et d'indente
     //on récupère les éléments a rajouter + la zone d'indentation
     var year = document.getElementById("date");
     var sel = document.getElementById('selec');
-    console.log(year);
 
     for(let i=0;i<sel.children.length;i++){//on retire tout les élements qui pourrais déjà exister (on vas le remplacer)
         if(sel.children[i].getAttribute("class")=="select Date"){
@@ -158,13 +157,11 @@ function Choix(){
         for(let i=0;i<ArticlePos.children.length;i++){ //pour tout les articles
             if(ArticlePos.children[i].getAttribute("class")=="flex-uncenter "+colo.innerText){ //on vérifie que l'article possède les attributs voulus
                 ArticlePos.children[i].style.display='block'; //on affiche l'attribut
-                console.log("yes");
+
             }
             else{
                 ArticlePos.children[i].style.display='none';
-                console.log("no");
             }
-            console.log(ArticlePos.children[i]);
         }
     }
     else{
