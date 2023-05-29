@@ -937,8 +937,10 @@ fieldset{
 }
 
 #cache{
-    grid-template-columns: repeat(42,10px);
-    grid-template-rows: repeat(20,10px);
+    grid-template-columns: repeat(20,10px);
+    grid-template-rows: repeat(21,10px);
+    margin-left: auto;
+    margin-right: auto;
 
     display:grid;
     position: relative;

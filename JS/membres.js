@@ -157,9 +157,9 @@ function main() {
     //on récupère l'élément qui entoure ce que l'ont veut cacher 
     var bigCache = document.getElementById("cache");
     
-    for(let j=0;j<20;j++){ //on boucle le nb lignes
+    for(let j=0;j<22;j++){ //on boucle le nb lignes
 
-        for(let i=0;i<42;i++){ //on boucle le nb de colonnes
+        for(let i=0;i<21;i++){ //on boucle le nb de colonnes
 
             var allreadyther = bigCache.innerHTML;//on conserve ce que contient déjà le cache (pour ne pas supprimer les cubes déjà fait)
             var newCache = document.createElement('div');//on crée un nvl élément cube
