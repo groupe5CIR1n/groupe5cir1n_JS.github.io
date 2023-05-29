@@ -165,6 +165,9 @@ function main() {
             var newCache = document.createElement('div');//on crée un nvl élément cube
             newCache.setAttribute("id","cube");
             newCache.setAttribute("onmouseover","cubeFear(this)");
+
+
+            newCache.style.backgroundColor='#'+(Math.random()*0xFFFFFF<<0).toString(16);
     
             newCache.style.gridColumn=i+'/'+(i+1);//on rajoute le cube a la position grid qui convient 
             newCache.style.gridRow = j+'/'+(j+1);
