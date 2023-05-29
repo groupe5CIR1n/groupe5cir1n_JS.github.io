@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="style.css" rel="stylesheet">
+    <link href="CSS/publications.css" rel="stylesheet">
     <script src="JS/general.js" defer></script>
     <script src="JS/publication.js" defer></script>
 </head>
@@ -68,11 +69,20 @@
                         <input id="date" type="date" onkeyup="modifDate()">
                     </td>
                     <td>
-                        <select id="selectedColor" class="form-select" aria-label="Default select example" onchange="modifColo()">
+                        <span id="selectedColor">
+                            <input type="radio" name="selectedColor" id="radioTous" checked="checked" onchange="modifColo(this)">
+                            <label for="radioTous" id = "radioOpt1">Tous</label>
+                            <input type="radio" name="selectedColor" id="radioRevues" onchange="modifColo(this)">
+                            <label for="radioRevues" id = "radioOpt2">Revues</label>
+                            <input type="radio" name="selectedColor" id="radioConferences" onchange="modifColo(this)">
+                            <label for="radioConferences" id = "radioOpt3">Conférences</label>
+                        </span>
+
+                        <!-- <select id="selectedColor" class="form-select" aria-label="Default select example" onchange="modifColo()">
                             <option selected>Tous</option>
                             <option style="background-color: #c32b72">Revues </option>
                             <option style="background-color: #196ca3">Conférences</option>
-                        </select>
+                        </select> -->
                     </td>
                     <td>
                         <textarea id="aut" class="publi" onkeyup="addAut()"></textarea>                       
@@ -90,7 +100,7 @@
                 <div class="flex-uncenter Revues">
                     <p>
                         <span id="carre-revue"></span>
-                        Sébastien Puma, Emmanuel Sander, Matthieu Saumard, Isabelle Barbet, Aurélien Latouche:
+                        <span id="authors">Sébastien Puma, Emmanuel Sander, Matthieu Saumard, Isabelle Barbet, Aurélien Latouche:</span>
                         <b>Reconsidering conceptual knowledge: Heterogeneity of its components.</b>
                         <i>Journal of Experimental Child Psychology, 2023, 227, pp.105587.</i>
                     </p>
@@ -99,7 +109,7 @@
                 <div class="flex-uncenter Conférences">
                     <p class="">
                         <span id="carre-congres"></span>
-                        Ayoub Karine, Thibault Napoléon, Maher Jridi.
+                        <span id="authors">Ayoub Karine, Thibault Napoléon, Maher Jridi.</span>
                         <b>Semantic Images Segmentation for autonomous driving using Self-Attention Knowledge Distillation.</b>
                         <i>16TH IEEE INTERNATIONAL CONFERENCE ON SIGNAL IMAGE TECHNOLOGY & INTERNET BASED SYSTEMS, Oct 2022, Dijon, France</i>
                     </p>
@@ -108,7 +118,7 @@
                 <div class="flex-uncenter Conférences">
                     <p>
                         <span id="carre-congres"></span>
-                        Salima Bourbia, Ayoub Karine, Aladine Chetouani, Mohammed El Hassouni, Maher Jridi.
+                        <span id="authors">Salima Bourbia, Ayoub Karine, Aladine Chetouani, Mohammed El Hassouni, Maher Jridi.</span>
                         <b>No-reference Point Clouds Quality Assessment using Transformer and Visual Saliency</b>
                         <i>QoEVMA'22: Proceedings of the 2nd Workshop on Quality of Experience (QoE) in Visual Multimedia Applications, ACM Multimedia, Oct 2022, Lisbon, Portugal</i>
                     </p>
@@ -117,7 +127,7 @@
                 <div class="flex-uncenter Revues">
                     <p>
                         <span id="carre-revue"></span>
-                        Ayoub Karine, Maher Jridi, Rémi Adde, Sébastien Demousselle.
+                        <span id="authors">Ayoub Karine, Maher Jridi, Rémi Adde, Sébastien Demousselle.</span>
                         <b>CONCEPTION ET DEVELOPPEMENT D'UNE VOITURE AUTONOME</b>
                         <i>La Revue 3 E. I, 2022</i>
                     </p>
@@ -126,7 +136,7 @@
                 <div class="flex-uncenter Revues">
                     <p>
                         <span id="carre-revue"></span>
-                        Sylvain Lefebvre, Maher Jridi.
+                        <span id="authors">Sylvain Lefebvre, Maher Jridi.</span>
                         <b>Mutualisation des Ressources IOT par Conteneurisation de Passerelle.</b>
                         <i>La Revue 3 E. I, 2022, Intelligence Artificielle et Génie Électrique 2ème partie, 109, pp.69</i>
                     </p>
