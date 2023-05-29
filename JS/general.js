@@ -45,20 +45,19 @@ function RedirectClick(acces){
 // Function when we click on the "membres" page
 function MembreClick(){
     // We ask five thousand confirms...
-    if(confirm("êtes vous sur de vouloir aller sur la page membre ?")==true){
-        if(confirm("Vraiment sûr ? ")==true){
-            if(confirm("Vraiment sûr ? ")==true){
-                if(confirm("VRAIMENT, vraiment sûr ?")==true){
-                    if(confirm("pis c'étais dur a coder alors bif bof")==true){
+    // if(confirm("êtes vous sur de vouloir aller sur la page membre ?")==true){
+    //     if(confirm("Vraiment sûr ? ")==true){
+    //         if(confirm("Vraiment sûr ? ")==true){
+    //             if(confirm("VRAIMENT, vraiment sûr ?")==true){
+    //                 if(confirm("pis c'étais dur a coder alors bif bof")==true){
                         if(confirm("bon ben si t'est sur ...")==true){
-                            alert("bon celui là il est juste là pour faire chier tkt");
                             RedirectClick("membres.html"); // If we answer yes to all of them, we go to the membres page (finally...)
                         } // (Really cool rainbow of brackets on visual studios here)
-                    }
-                }
-            }
-        }
-    }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 // Function to show the date on the header.
