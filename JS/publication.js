@@ -34,8 +34,11 @@ function modifDate(){ //permet de capter la modification de la date et d'indente
     }
 }
 
-function modifColo(){
-    var colo = document.querySelector('#selectedColor');
+function modifColo(color) {
+
+    var coloSearch = "label[for=" + color.id + "]";
+    var colo = document.querySelector(coloSearch);
+    // var colo = document.querySelector('#selectedColor');
     var sel = document.getElementById('selec');
 
     for(let i=0;i<sel.children.length;i++){
@@ -48,14 +51,12 @@ function modifColo(){
     elemColo.setAttribute("class","select Colo");
     elemColo.setAttribute("onclick","unclick(this)");
     elemColo.setAttribute("value",colo.value);
-    elemColo.innerText=colo.value;
+    elemColo.innerText=colo.innerHTML;
 
     var alreadythereDarling = sel.innerHTML;
 
     sel.innerHTML=alreadythereDarling+elemColo.outerHTML+' ';
-    if(sel.children.length>0){
-        Choix();
-    }
+    Choix();
 }
 
 function addAut(){
@@ -79,10 +80,7 @@ function addAut(){
         sel.innerHTML=alreadythereDarling+elemAut.outerHTML+' ';
     }
 
-
-    if(sel.children.length>0){
-        BOOM();;
-    }
+    Choix();;
 }
 
 function addArt(){
@@ -106,9 +104,7 @@ function addArt(){
         sel.innerHTML=alreadythereDarling+elemArt.outerHTML+' ';
     }
 
-    if(sel.children.length>0){
-        Choix();
-    }
+    Choix();
 }
 
 function unclick(pos){
@@ -118,7 +114,7 @@ function unclick(pos){
     Choix();
 }
 
-function Choix();{
+function Choix() {
     //paramettres généreaux (liste des attributs + liste des articles)
     var allParam = document.getElementById("selec");
     var ArticlePos = document.getElementById("place-for-article");
@@ -158,13 +154,16 @@ function Choix();{
 
     //filtre couleur
     if(colo.innerHTML!="Tous"){
-        for(let i=0;i<ArticlePos.children.length;i++){ //pour tout les articles 
+        for(let i=0;i<ArticlePos.children.length;i++){ //pour tout les articles
             if(ArticlePos.children[i].getAttribute("class")=="flex-uncenter "+colo.innerText){ //on vérifie que l'article possède les attributs voulus
                 ArticlePos.children[i].style.display='block'; //on affiche l'attribut
+                console.log("yes");
             }
             else{
                 ArticlePos.children[i].style.display='none';
-            }            
+                console.log("no");
+            }
+            console.log(ArticlePos.children[i]);
         }
     }
     else{
@@ -184,16 +183,17 @@ function Choix();{
             }        
         }
     }
-    else{
-        for(let i=0;i<ArticlePos.children.length;i++){
-            ArticlePos.children[i].style.display='block';
-        }
-    }
+    // else{
+    //     for(let i=0;i<ArticlePos.children.length;i++){
+    //         ArticlePos.children[i].style.display='block';
+    //     }
+    // }
 
     //filtre Auteur
     if(AuthenticatorAssertionResponse.textContent!=''){
         for(let i=0;i<ArticlePos.children.length;i++){
-            if(ArticlePos.children[i].innerText.indexOf(aut.innerHTML)!=-1 && ArticlePos.children[i].style.display=='block'){
+            // if(ArticlePos.children[i].innerText.indexOf(aut.innerHTML)!=-1 && ArticlePos.children[i].style.display=='block'){
+                if(ArticlePos.children[i].children[0].children[1].innerText.indexOf(aut.innerHTML)!=-1 && ArticlePos.children[i].style.display=='block'){
                 ArticlePos.children[i].style.display='block';
             }
             else{
