@@ -63,7 +63,7 @@ function addMember() {
 
     var imgMembre = document.createElement("img");
     imgMembre.className += "membre";
-    imgMembre.src = "images/membres/Salima-Bourbia.png";
+    imgMembre.src = "images/membres/questionmarkPerson.png";
 
     var grid = document.createElement("div");
     grid.classList += "grid";
