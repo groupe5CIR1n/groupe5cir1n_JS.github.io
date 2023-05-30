@@ -1,4 +1,4 @@
-let debug = 0; // Variable allowing to be directly in edit mode.
+let debug = 1; // Variable allowing to be directly in edit mode.
 
 // Function linked to the edit mode.
 function editMode(button) {
@@ -56,12 +56,36 @@ function newMemberName(membre) {
         if (newName != null) { // If it's not null...
             membre.innerHTML = newName; // We replace it.
         }
-
         if (newName == "Derpy") {
-            membre.parentNode.parentNode.children[0].src = "images/derpi.gif"
+        membre.parentNode.parentNode.children[0].src = "images/derpi.gif"
         }
         else {
-            membre.parentNode.parentNode.children[0].src = "images/membres/questionmarkPerson.png";
+            if (newName == "Ayoub Karine") {
+                membre.parentNode.parentNode.children[0].src = "images/membres/Ayoub-Karine.png"
+            }
+            else {
+                if (newName == "Djamel Benarab") {
+                    membre.parentNode.parentNode.children[0].src = "images/membres/Djamel-Benarab.png"
+                }
+                else {
+                    if (newName == "Maher Jridi") {
+                        membre.parentNode.parentNode.children[0].src = "images/membres/Maher-Jridi.png"
+                    }
+                    else {
+                        if (newName == "Salima Bourbia") {
+                            membre.parentNode.parentNode.children[0].src = "images/membres/Salima-Bourbia.png"
+                        }
+                        else {
+                            if (newName == "Sylvain Lefebvre") {
+                                membre.parentNode.parentNode.children[0].src = "images/membres/Sylvain-Lefebvre.png"
+                            }
+                            else {
+                                membre.parentNode.parentNode.children[0].src = "images/membres/questionmarkPerson.png";
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

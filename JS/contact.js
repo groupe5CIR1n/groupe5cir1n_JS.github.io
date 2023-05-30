@@ -1,3 +1,6 @@
+let vitessePlane = 2000;
+let vitessePlayer = 75;
+
 // This function generates the game once the form is finished and sent.
 function theGame(event) {
     event.preventDefault(); // Prevents the reload of the page to execute this function.
@@ -65,8 +68,8 @@ function startGame() {
     var spaceBar = false; // We will use this variable to know if the user releases their spacebar or not.
     document.addEventListener("keydown", function(event) { // When the user holds down a key...
         if(event.code === "Space" && spaceBar == false && planeWidth < width && bicycleWidth < planeWidth - 100) { // If the key is space and it's not held down, and we didn't reach a win/lose condition...
-            bicycleWidth += width/150; // We add 0.5% of the screen width to the position of the bicycle.
-            bicycle.style.left = parseFloat(bicycle.style.left) + width/150 + "px";
+            bicycleWidth += width/vitessePlayer; // We add 0.5% of the screen width to the position of the bicycle.
+            bicycle.style.left = parseFloat(bicycle.style.left) + width/vitessePlayer + "px";
             spaceBar = true; // And spacebar = true to avoid holding the button.
         }
     })
@@ -80,8 +83,8 @@ function startGame() {
 
     function move() {
         if (planeWidth < width && bicycleWidth < planeWidth - 100) { // If we didn't reach a win/lose condition...
-        doc.style.left = parseFloat(doc.style.left) + width/2000 + "px"; // We move the plane by few pixels depending of the screen size...
-        planeWidth += width/2000; // We keep the position of the plane in a variable.
+        doc.style.left = parseFloat(doc.style.left) + width/vitessePlane + "px"; // We move the plane by few pixels depending of the screen size...
+        planeWidth += width/vitessePlane; // We keep the position of the plane in a variable.
         setTimeout(move, 10); // We repeat it each 0.01s.
         }
         else { // If we reached a win/lose condition...
