@@ -1,5 +1,5 @@
 let vitessePlane = 2000;
-let vitessePlayer = 75;
+let vitessePlayer = 220;
 
 // This function generates the game once the form is finished and sent.
 function theGame(event) {
@@ -13,6 +13,17 @@ function theGame(event) {
 // Allows the user to close the modal with the cross (in case they did a typo or something).
 function closeModal(modal) {
     modal.style.display = "none"; // Hides the modal.
+}
+
+function demoMode() {
+    var password = prompt("Merci d'écrire le mot de passe nécessaire pour accéder à la version démo :");
+    if (password == "Derpy") {
+        alert("Mot de passe correct (s'il vous plaît dites-moi que tout le code marche) (Vive derpy aussi)")
+        vitessePlayer = 75;
+    }
+    else {
+        alert("Tricheur ! (bon en vrai si tu connais cette commande c'est que tu as regardé le code donc tu connais le mot de passe ptdr");
+    }
 }
 
 // Main function for the game (it's really long, good luck reading that.)
