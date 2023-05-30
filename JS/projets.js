@@ -25,7 +25,7 @@ function changeImage(article,imaged){
 
   }
   else{
-    pos.src = resu; //on attribut simplement la src que l'on connais (pour l'image de base)
+    pos.src = imaged; //on attribut simplement la src que l'on connais (pour l'image de base)
     pos.removeAttribute("class");
   }
 }
