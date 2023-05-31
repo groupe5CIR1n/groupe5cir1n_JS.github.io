@@ -114,7 +114,7 @@ function timer(){
             resu = "0"+heures+":";
         }
         else{
-            resu = heure+":";
+            resu = heures+":";
         }
 
         if(min<10){
