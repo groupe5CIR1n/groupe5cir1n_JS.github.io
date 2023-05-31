@@ -1,4 +1,4 @@
-let debug = 0; // Variable allowing to be directly in edit mode.
+let debug = 1; // Variable allowing to be directly in edit mode.
 
 // Function linked to the edit mode.
 function editMode(button) {
@@ -26,6 +26,9 @@ function editMode(button) {
         if (adminName == "admin" || adminName == "le nom d'utilisateur") { // If it's correct
             var adminPwd = prompt("Entrer le mot de passe :", "juste ici"); // We ask for the password
             if (adminPwd == "admin_pwd" || adminPwd == "le mot de passe") {
+                if (adminPwd == "le mot de passe") {
+                    alert("Petit malin...");
+                }
                 button.innerHTML = "Retourner en vue du bas peuple"; // We switch the button to pass in normal mode if clicked again
                 buttonAdd.style.visibility = "visible"; // And show the button to add members
                 
@@ -53,6 +56,37 @@ function newMemberName(membre) {
         if (newName != null) { // If it's not null...
             membre.innerHTML = newName; // We replace it.
         }
+        if (newName == "Derpy") {
+        membre.parentNode.parentNode.children[0].src = "images/derpi.gif"
+        }
+        else {
+            if (newName == "Ayoub Karine") {
+                membre.parentNode.parentNode.children[0].src = "images/membres/Ayoub-Karine.png"
+            }
+            else {
+                if (newName == "Djamel Benarab") {
+                    membre.parentNode.parentNode.children[0].src = "images/membres/Djamel-Benarab.png"
+                }
+                else {
+                    if (newName == "Maher Jridi") {
+                        membre.parentNode.parentNode.children[0].src = "images/membres/Maher-Jridi.png"
+                    }
+                    else {
+                        if (newName == "Salima Bourbia") {
+                            membre.parentNode.parentNode.children[0].src = "images/membres/Salima-Bourbia.png"
+                        }
+                        else {
+                            if (newName == "Sylvain Lefebvre") {
+                                membre.parentNode.parentNode.children[0].src = "images/membres/Sylvain-Lefebvre.png"
+                            }
+                            else {
+                                membre.parentNode.parentNode.children[0].src = "images/membres/questionmarkPerson.png";
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -65,6 +99,7 @@ function addMember() {
     // We create all elements needed for a member...
     var gridMembre = document.createElement("div");
     gridMembre.className += "grid-membre";
+    gridMembre.onclick = function() {modal(this)}; // And when we click on the member, it shows in the modal as expected.
 
     var imgMembre = document.createElement("img");
     imgMembre.className += "membre";
@@ -75,6 +110,7 @@ function addMember() {
 
     var nameMembre = document.createElement("h5");
     nameMembre.innerHTML = "Nouveau membre";
+    nameMembre.onclick = function() {newMemberName(this)};
 
     var descr = document.createElement("p");
     descr.classList += "description-membre";
@@ -112,8 +148,6 @@ function addMember() {
     grid.appendChild(tags);
     tags.appendChild(tag);
     gridMembre.appendChild(button);
-    
-    gridMembre.onclick = function() {modal(this)}; // And when we click on the member, it shows in the modal as expected.
 }
 
 // Function to delete a member

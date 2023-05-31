@@ -172,10 +172,10 @@ function changeColor(item) {
     else { // Else, color will just be the background color of the item.
         var color = item.style.backgroundColor;
     }
-    console.log(color); // We show the color in the console
+    console.log("l'ancienne couleur était : ", color); // We show the color in the console
     item.style.backgroundColor = "blue"; // We set it to blue (cause why not?)
     var color = item.style.backgroundColor; // We change the color variable to the one of the item (the new one)
-    console.log(color); // We console log'd it 
+    console.log("La nouvelle couleur est : ", color); // We console log'd it 
 }
 
 // Function called for elements that redirect to a webpage
