@@ -1,4 +1,4 @@
-let debug = 1; // Variable allowing to be directly in edit mode.
+let debug = 0; // Variable allowing to be directly in edit mode.
 
 // Function linked to the edit mode.
 function editMode(button) {
