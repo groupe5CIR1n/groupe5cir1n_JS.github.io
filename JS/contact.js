@@ -167,11 +167,11 @@ function textAreas() {
     }
 
     // We check each char of the mail
-    for (var i = 0; i < inMail.value.length; i++) {
+    for (var i = 1; i < inMail.value.length; i++) {
         if (inMail.value[i] === "@") { // If one char is an @...
             mailValid = 1; // We set mailValid to 1.
         }
-        if (inMail.value[i] === "." && mailValid == 1) { // If we already had an @ and we have a point...
+        if (inMail.value [i-1] != "@" && inMail.value[i] === "." && mailValid == 1 && inMail.value.length > i+1) { // If we already had an @ and we have a point...
             errs[1].style.display = "none"; // We hide the error
             mailValid = 2; // And set mailValid to 2.
         }
